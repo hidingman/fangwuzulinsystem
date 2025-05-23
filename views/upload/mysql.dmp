@@ -1,0 +1,1284 @@
+-- MySQL dump 10.13  Distrib 5.7.43, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: ssmi697k
+-- ------------------------------------------------------
+-- Server version	5.7.43
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `caipinshibie`
+--
+
+DROP TABLE IF EXISTS `caipinshibie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `caipinshibie` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `caipinmingcheng` varchar(200) DEFAULT NULL COMMENT '菜品名称',
+  `caipintupian` longtext COMMENT '菜品图片',
+  `baikelianjie` varchar(200) DEFAULT NULL COMMENT '百科链接',
+  `baikexiangqing` longtext COMMENT '百科详情',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 COMMENT='菜品识别';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `caipinshibie`
+--
+
+LOCK TABLES `caipinshibie` WRITE;
+/*!40000 ALTER TABLE `caipinshibie` DISABLE KEYS */;
+INSERT INTO `caipinshibie` VALUES (211,'2023-08-09 01:09:19','菜品名称1','upload/caipinshibie_caipintupian1.jpg,upload/caipinshibie_caipintupian2.jpg,upload/caipinshibie_caipintupian3.jpg','百科链接1','百科详情1'),(212,'2023-08-09 01:09:19','菜品名称2','upload/caipinshibie_caipintupian2.jpg,upload/caipinshibie_caipintupian3.jpg,upload/caipinshibie_caipintupian4.jpg','百科链接2','百科详情2'),(213,'2023-08-09 01:09:19','菜品名称3','upload/caipinshibie_caipintupian3.jpg,upload/caipinshibie_caipintupian4.jpg,upload/caipinshibie_caipintupian5.jpg','百科链接3','百科详情3'),(214,'2023-08-09 01:09:19','菜品名称4','upload/caipinshibie_caipintupian4.jpg,upload/caipinshibie_caipintupian5.jpg,upload/caipinshibie_caipintupian6.jpg','百科链接4','百科详情4'),(215,'2023-08-09 01:09:19','菜品名称5','upload/caipinshibie_caipintupian5.jpg,upload/caipinshibie_caipintupian6.jpg,upload/caipinshibie_caipintupian7.jpg','百科链接5','百科详情5'),(216,'2023-08-09 01:09:19','菜品名称6','upload/caipinshibie_caipintupian6.jpg,upload/caipinshibie_caipintupian7.jpg,upload/caipinshibie_caipintupian8.jpg','百科链接6','百科详情6'),(217,'2023-08-09 01:09:19','菜品名称7','upload/caipinshibie_caipintupian7.jpg,upload/caipinshibie_caipintupian8.jpg,upload/caipinshibie_caipintupian9.jpg','百科链接7','百科详情7'),(218,'2023-08-09 01:09:19','菜品名称8','upload/caipinshibie_caipintupian8.jpg,upload/caipinshibie_caipintupian9.jpg,upload/caipinshibie_caipintupian10.jpg','百科链接8','百科详情8');
+/*!40000 ALTER TABLE `caipinshibie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `chaptertushuxinxi`
+--
+
+DROP TABLE IF EXISTS `chaptertushuxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `chaptertushuxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `chapternum` int(11) NOT NULL COMMENT '章节数',
+  `chaptertitle` varchar(200) NOT NULL COMMENT '章节标题',
+  `content` longtext NOT NULL COMMENT '章节内容',
+  `vipread` varchar(200) DEFAULT '否' COMMENT '会员阅读',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=379 DEFAULT CHARSET=utf8 COMMENT='图书信息章节表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chaptertushuxinxi`
+--
+
+LOCK TABLES `chaptertushuxinxi` WRITE;
+/*!40000 ALTER TABLE `chaptertushuxinxi` DISABLE KEYS */;
+INSERT INTO `chaptertushuxinxi` VALUES (371,'2023-08-09 01:09:20',131,1,'第一章 离乡','<p> 铁柱坐在村内的小路边，望着蔚蓝的天空，神情发呆，铁柱不是他的本名，而是从小因为身体瘦弱，父亲怕养不活，于是按照习俗称呼的小名。</p><p> 他的本名叫做王林，王姓在四周几个村落内算是大姓，祖上木匠出身，尤其是在县城，王氏家族也算颇有名气，拥有数个专门卖木制品的店铺。</p><p> 铁柱的父亲是家族内庶出的次子，不能接管家族要务，而是在成婚后离开县城，在此地村庄定居。</p><p> 由于有一手精湛的木匠活儿，铁柱家境也算小康，吃穿不愁，就算是在村子里，也多受人尊敬。</p><p> 铁柱从小就极为聪明，喜欢读书，想法很多，几乎是村子内公认的神童，父亲每次听到别人夸奖，脸上的皱纹都会绽开，露出开怀的微笑。</p><p> 母亲更是对他关心有佳，可以说从小到大，铁柱都是生活在父母的慈爱之中，他知道父母对他期望很高，别人家的孩子在他这个年纪都已经下地干农活了，可他却在家读书。</p><p> 书读的多了，想法自然也就随之而来，对于山村外的世界，他充满向往。抬头望了望小路的尽头，铁柱叹息一声，合上手中书本，起身向家中走去。</p><p> 父亲坐在院子里，手中拿着烟袋，深深的吸了一口后，对推门进来的铁柱说道：“铁柱，书读的怎么样了？”</p><p> 铁柱应付了几句，父亲磕了磕烟袋，起身说道：“铁柱啊，你要好好读书，明年就是县里大考了，你以后有没有出息，可就全看这次了，可别跟我一样，这辈子就呆在村子里，唉。”</p><p> “行了，你天天叨叨，要我说，我们家铁柱一定能考上。”铁柱的母亲，端着饭菜放在院内桌子上，招呼他们父子二人过来吃饭。</p><p> 铁柱哦了一声，坐下后胡乱的拔了几口，母亲慈爱的望着儿子，把不多的几块肉，给他夹过去。</p><p> “爹，四叔快来了吧？”铁柱抬头说道。</p><p> “算算时间，差不多就是这几天了，你四叔比爹有出息，唉，孩儿他娘，给老四准备的山菜都包好了吧？”父亲一提起老四，脸上露出唏嘘之色。</p><p> 母亲点头，感慨道：“铁柱啊，你四叔是个好人，这几年幸亏他帮助，你爹做的木雕才能卖出价钱，你以后要是有出息了，别忘记报答你四叔。”</p><p> 正说着，忽然门外传来马声，接着马车轱辘压地的哗哗声随之而来，一个爽朗的声音在外面响起。</p><p> “二哥，开门喽。”</p><p> 铁柱惊喜，立刻跑过去把院子大门推开，只见一个精壮的中年汉子，目光炯炯的站在门外，他看到铁柱后哈哈一笑，摸了摸他的脑袋，笑道：“铁柱，这才半年没看到，个子又长高了。”</p><p> 铁柱父母连忙站起，他父亲笑道：“老四，我约莫时间，你也快来了，快进来，铁柱，还不去给你四叔拿凳子去。”</p><p> 铁柱高兴的应了一声，急忙跑回屋子，拿出一个板凳放在饭桌旁，用袖子认真的擦了擦，希冀的望着中年汉子。</p><p> 中年汉子冲他眨了眨眼睛，打趣道：“铁柱，这次怎么这么勤快啊，我记得上次我来的时候，你可没这样啊。”</p><p> 铁柱父亲瞪了铁柱一眼，笑骂道：“这小兔崽子，刚才就在叨叨你是不是快来了。”</p><p> 中年汉子看到铁柱小脸微红，笑道：“铁柱，你四叔可没忘记答应你的东西。”说完，从怀来拿出两本线状书，放在桌子上。</p><p> 铁柱兴奋的欢呼一声，拿起书翻看一下，喜不自禁。</p><p> 铁柱他娘慈祥的望了眼自己儿子，对中年汉子说道：“老四，你哥平时总念叨你，这次多住几天吧。”</p><p> 中年汉子摇头道：“二嫂，家族这段日子事情多，我明儿一早就要赶回去，等这段时间忙完了，我再来看你们。”说完，他歉意的看了看自己二哥。</p><p> 铁柱父亲叹息，说道：“老四别听你嫂子的，明儿把货物装好，家族的事儿最重要，咱们以后再聚也一样。”</p><p> 中年汉子望着铁柱父亲，说道：“二哥，铁柱今年十五岁了吧？”</p><p> 铁柱父亲点头，感慨道：“过了年，这小兔崽子就十六了，唉，一晃十多年过去，真快。”说着，他眼露溺爱之色，望着自己的儿子。</p><p> 中年汉子沉吟少许，面色一肃，说道：“二哥，二嫂，和你们说件事儿，恒岳派今年收取弟子，家族有三个推荐名额，分到我这里有一个。”</p><p> 铁柱父亲一怔，失色道：“恒岳派？可是那个全都是仙人的恒岳派？”</p><p> 中年汉子一笑，点头说道：“二哥，就是那个仙人门派，咱们家族在附近也算望族，有推荐资格，我家小子你也知道，读书不行，舞刀弄剑倒是擅长，我琢磨着仙人不大会收我家小子，这名额珍贵，我看铁柱从小就聪明，喜好读书，说不定能行。”</p><p> 铁柱母亲喜极，急忙说道：“老四，这……这……”</p><p> 中年汉子摸了摸铁柱脑袋，说道：“二哥，二嫂，我看这事就这么定了吧，让铁柱去试试，要是真被收取了，那就是他的福分。”</p><p> 铁柱迷惑的望着父母与四叔，他有些听不懂他们说些什么，仙人？什么叫做仙人？铁柱犹豫了一下，轻声询问。</p><p> 中年汉子面色严肃，望着铁柱，说道：“铁柱啊，仙人就是可以在天上飞来飞去，他们每一个人都神通广大，不是我们凡人可以琢磨的。”</p><p> 铁柱懵懂间，对仙人有了一丝好奇。</p><p> 铁柱父亲激动起身，拉着铁柱他娘对中年汉子就要鞠躬，中年汉子连忙把他们扶起，诚恳的说道：“二哥，你这是做什么。我娘死的早，要不是二娘小时候照顾我，我也不可能有今天，铁柱是我侄儿，我这么做是应该的。”</p><p> 铁柱父亲感慨流泪，重重的拍了拍中年汉子，点了点头，随后疾言厉色的对铁柱说道：“王林你记住，以后无论如何，都不要忘记你四叔对咱们家的恩惠，否则我就没你这个儿子！”</p><p> 铁柱内心一颤，他虽然对仙人还是懵懂，但却从父母的表情中看出他们对此事极为重视，于是跪在四叔面前，重重的磕了几个响头。</p><p> 中年汉子拉起铁柱，赞赏的说道：“好孩子，你这几天收拾一下，我月底来接你！”</p><p> 旁晚，铁柱早早的睡下，耳边还能听到院子里父亲与四叔的声音，父亲今天很高兴，很少喝酒的他，说什么也要和四叔喝上几杯。</p><p> “仙人？到底是什么？”铁柱内心很兴奋，他幼小的心灵隐约知道，这将是自己的一个机会，一个可以去外面世界的机会！</p><p> 第二天一早，四叔离开了，铁柱的父母拉着他一直送到村口，在回来的路上，铁柱清晰的看到，父亲似乎一下子年轻了很多，看向他的眼神，也充满了期望。</p><p> 这种期望的眼神，要比之前让他去县里大考时，浓重很多。</p><p> 小山村内根本没有秘密可言，就是一只狗生了几个崽子也能在瞬间传遍全村，很快全村的人都从铁柱母亲嘴里知道了这个消息，纷纷来访，每个人的眼神看向铁柱时都不同，有羡慕，有嫉妒……</p><p> “王家生了个好娃，人家被恒岳派收为弟子了。”</p><p> “铁柱这孩子我从小看他长大，这孩子打小就聪明，这次又成为恒岳派弟子，以后定有大出息。”</p><p> “铁柱有本事，以后出息了可别忘记咱们村，多回来看看啊。”</p><p> 诸如此类的话，纷纷涌入铁柱耳中，渐渐的说成了他已经成为恒岳派弟子一般，父母每次听到，都笑的合不上嘴，脸上的皱纹似乎都少了很多。</p><p> 每当铁柱独自走在村内，所有看到他的村民，都热情的拉着他问来问去，更有甚者甚至当着自己孩子面，把铁柱当成榜样，训导一番。</p><p> 半个月的时间很快过去，铁柱成为恒岳派弟子的消息迅速传开，周围十里八乡的村民，都陆续的前来道贺，他们的主要目的是看一看铁柱。</p><p> 每个人来时，都会准备礼物，铁柱父母推脱不掉，也就收下了。不过在这些人离开时，他们都会为其准备一份重重的回礼，按照铁柱父亲的话说，咱家的娃儿以后那是高高在上的仙人，不能让他欠下这么多人情债，所有来访的村民，咱都给他回礼。</p><p> 此时，王氏家族的族人，也渐渐知道老四把自己娃的名额让给铁柱的事情，纷纷陆续前来道喜。</p><p> 对于自己家族的族人，铁柱父亲极为重视，这些人里有很多是之前瞧不起他的，更有多年前把他逼出家族的，现在这些人一个个前来他家，让他感觉一下子多年的憋屈一扫而空。</p><p> 他和铁柱他娘商量一下，准备好好招待一番，于是花了大价钱，请村里的教书先生写下请帖，送往族内。</p><p> 教书先生说什么也不收钱，只是要求铁柱必须要承认，他从小就在自己这里念书，对此铁柱没啥说的，这本就是事实嘛。</p><p> 请帖送到后，王氏家族族内大部分亲戚都来庆祝，由于来人太多，铁柱他爹把招待地点选在了村子中心的广场，摆下数百桌宴席。</p><p> 村子的居民自行帮着招待，相互交谈之时无不对铁柱赞叹有佳，夸奖不已。</p><p> 至于铁柱他爹，则是带着老婆孩子亲自在村口迎接，为铁柱一一介绍亲戚身份。</p><p> “这是你三祖父，当初爹离开家族，你三祖父暗中帮衬了不少，铁柱，你以后要记的报答。”铁柱父亲搀扶着一个白发苍苍的老人，对王林说道。</p><p> 铁柱连忙乖巧的应诺，老人望着铁柱，感慨道：“老二啊，时间真快，你家娃娃都这么大了，你这娃很好，比你有出息。”</p><p> 铁柱父亲满面红光，笑道：“三祖父，铁柱这孩子从小就聪明，指定是比我强啊。您老慢点走，孩儿他娘，扶着三祖父过去。”</p><p> 铁柱母亲连忙上前，搀扶老人走向宴席。</p><p> 看到老人走了后，铁柱他爹哼了一声，对铁柱说道：“这老家伙，当初看不上你爹，非要把我逼走，现在铁柱你出息了，又来道喜，这亲戚啊，就是这样。”</p><p> 铁柱懵懂的点了点头，问道：“爹，四叔今天来么？”</p><p> 铁柱父亲摇头道：“你四叔传来信儿，他在外地回不来，等月底接你时才能赶回。”</p><p> 这时，又有马车奔行而来，在村口停下后，走出一个五十多岁的老者，他望了望铁柱父亲，轻叹一声，说道：“老二，恭喜。”</p><p> 铁柱父亲面色复杂，许久后说道：“大哥……”</p><p> 老者目光一扫，望着铁柱，微笑道：“老二，这就是你家小子吧，不错，这次说不定真能被选上。”</p><p> 铁柱父亲眉头一皱，随后舒展开，说道：“铁柱这孩子没啥优点，就是打小聪明，愿意读书，这次指定是会被选上。”</p><p> “那可不一定，仙人门派收取弟子，要求非常严格，讲究有没有仙缘，我看这小子傻头傻脑的，去了也是白搭。”一个傲慢不逊的声音悠悠传来，从马车上走下一个十六七的少年。</p><p> 少年相貌俊美，剑眉星目，面如冠玉，眼中露出轻蔑之色。</p><p> 铁柱父亲怒目而视，王林则深深的看了对方一眼，没有说话。</p><p> 老者面色一肃，喝道：“王卓，怎么这么没有礼貌，这是你二叔，这是你弟弟王林，还不见礼。”说完，他又对铁柱父亲说道：“犬子说话难听，老二你别介意，不过……”说道这里，他话锋一转，又道：“不过老二，这仙人收徒，可不是那么简单的事情，需要讲究缘分，这次是恒岳派道虚上仙看重了犬子，这才对我王氏家族感兴趣，给了包括犬子在内的三个名额。”</p><p> 铁柱父亲哼了一声，说道：“你家娃既然能行，我家娃，一定也会被选中！”</p><p> 少年耻笑，根本就不在乎老者的喝斥，蔑视道：“你就是二叔吧，我劝你还是别往好了想，这修仙体制不说万中无一也差不多，这傻小子不可能和本少爷比，本少是被仙师内定的弟子，他能比么？”</p><p> 老者脸上得意之色一闪而过，又训斥了几句，对铁柱父亲一抱拳，带着少年走向宴席。</p><p> “铁柱，不要有压力，要是真没被选上也不算啥，明年去县里大考也是一样。”铁柱父亲憋了半天气，许久后才缓舒出来，语重心长的说道。</p><p> 王林目光坚定，低声道：“爹，你放心，我一定能被选中！”</p><p> 铁柱他爹温和的拍了拍儿子肩膀，眼神中露出期望的目光。</p><p> 又陆续迎接了不少亲戚，铁柱父亲最后带着他回到宴席，此时高朋满座，场面热闹非凡，众人相互庆祝，熙熙攘攘。</p><p> “族内的亲戚们，父老乡亲们，我王天水没啥文化，不会说什么词儿，但是我今天高兴，我家娃这次有机会被恒岳派选中弟子，是我这辈子最高兴的事儿，我多了也不说了，感谢各位来我这儿道喜，谢谢了！”铁柱父亲大声说完，端起酒杯一干二净。</p><p> “老二，你家娃娃从小就聪明伶俐，一定能被选中，和王卓那孩子一样，成为仙人。”</p><p> “二哥，你有铁柱这孩子，这辈子算不白活了，以后等着享福就行了。”</p><p> “铁柱，给你爹争口气，这次无论如何也要进入恒岳派。”</p><p> 场面一时间大为锦繁，庆祝声四起，不过暗地里，也有很多人抱着看热闹的心态，比如王卓的父亲，就是如此，他表面上恭喜，内心却从来都瞧不起这个二弟，对他的孩子就更是如此，他望了望自己家的小子，又看了看铁柱，内心颇不以为然，心道老四这次把名额让出，虽然出乎自己预料，但只要那些仙人不是瞎子，就不可能选中铁柱。</p><p> 人生百态，此间众人一一可见，铁柱父亲拉着铁柱，挨个桌子敬酒，为他介绍一个又一个陌生的亲戚。</p><p> 这一天，铁柱的父亲喝了很多酒，他从来没有这么风光过，一直到很晚，亲戚陆续离开。临走时，少年王卓依然还是那副瞧不起的表情，趁人不注意在铁柱耳边轻声道：“傻小子，你不会被选中的，你没有那块料。”</p><p> 说完，他轻蔑的一笑，随着他父亲离开了。</p><p> 回到家中，铁柱躺在床上，内心暗自决定，无论如何，也要被选中！</p><p> 半个月匆匆而过，这一天，铁柱四叔赶着马车来了。</p><p> 铁柱父母连忙把他迎入房内，中年汉子洗了把脸，匆匆说道：“二哥，二嫂，这次不能待时间长，我接上铁柱马上离开，明天一早恒岳派就要来接人了。”</p><p> 铁柱父亲一怔，脸上露出一丝不舍之意，果断的说道：“行，铁柱，跟着你四叔走吧，你……你若是被选中，就踏踏实实的在恒岳派，若是……若是没被选中，不要有任何负担，回到家里来。”</p><p> 铁柱不舍的望着父母，重重的点了点头，他母亲从房间拿出个包裹，爱怜的说道：“铁柱，出去要听四叔话，不要惹事，外面不比家里，遇事多忍让，娘给你准备了几件新衣服，还有你最爱吃的烤甘薯，娘会想你的，要是没被选中，就回来……”铁柱他娘说着说着，眼泪就流了下来。</p><p> 铁柱从小到大，都没有出过村子，这次，是他第一次离开。</p><p> 四叔在一旁感慨，说道：“铁柱，给你爹娘争口气，一定要被选中。二哥，二嫂，家族几天后会有大型欢庆席，今天着急，我明儿来接你们一起过去，家族的三个被推荐上去的娃娃，那时就有结果了。”</p><p> 说完，他拉着铁柱匆匆上了马车，抽了马匹一鞭子，扬长而去。</p><p> 铁柱的爹娘，一直望着飞快消失的马车，泪流不止。</p><p> “他爹，铁柱从来没离开过咱们身边，这次他出去会不会受欺负。”铁柱他娘咬着下唇，眼中露出不舍。</p><p> “娃娃长大了，自有他们的福气……”铁柱父亲拿起烟袋，深深的吸了一口，脸上的皱纹，一下子又多了不少。</p>','否'),(372,'2023-08-09 01:09:20',131,2,'第二章 仙人','<p> 马车飞快的在小路上驰骋，王林的身子随着地面的坑洼起伏晃动，他抱着怀里的包裹，内心跌宕，带着父母对他的期望，离开了居住十五年的山村。</p><p> 此地距离县城有不短的路程，王林渐渐睡下，也不知过了多久，他被人轻轻推动，睁开眼睛一看，四叔面带微笑的望着他，打趣道：“铁柱，第一次离开家门，有什么感想啊。”</p><p> 王林察觉到马车已经停下，憨笑道：“没啥感想，就是有些害怕，不知道能不能被仙人收入。”</p><p> 四叔哈哈一笑，拍了拍铁柱肩膀，说道：“行了，别想那么多了，到地方了，这是四叔家，你先去休息，等早上我带去你家族。”</p><p> 下了马车后，展现在王林面前的是一片瓦房，跟着四叔来到一处房间，王林坐在床上却怎么也没有睡意，他脑中闪过一幕幕爹娘、乡亲、亲戚的言语，内心轻叹，对于被仙人收入弟子的念头，更重了。</p><p> 时间一点点过去，不大一会天色微亮，日头渐渐升起，王林尽管一夜没怎么休息，但精神却很充沛，带着一丝忐忑，他随着四叔来到了王氏家族的大宅子。</p><p> 这是王林第一次看到这么大的房子，眼花缭乱，四叔边走边叹道：“铁柱，这次一定要给你爹争口气，可别叫亲戚们笑话。”</p><p> 王林内心更加紧张，紧咬下唇，点了点头。</p><p> 不大一会儿，四叔把他领到宅子正中的大院子里，铁柱他爹的大哥，那个老者站在院中，看到铁柱后略点头，说道：“铁柱，一会仙人来了，可别大惊小怪，一切事情就跟着你哥哥王卓学，他怎么做，你就怎么做，知道么！”</p><p> 最后几个字，老者语气严厉。</p><p> 王林沉默不语，四下一看，发现除了王卓之外，还有一个少年，少年皮肤略黑，虎头虎脑，眼中更是透出一丝机灵，他衣内鼓鼓，好似揣了什么东西。</p><p> 他看到铁柱望向自己，冲他做了个鬼脸，跑过来问道：“你就是二叔家的铁柱哥吧，我叫王浩。”</p><p> 王林轻笑，点了点头。</p><p> 老者看到铁柱居然不理会自己，心底微恼，正要喝斥。</p><p> 就在这时，忽然天上云彩飘扬，一道剑光闪电般破空而来，剑光消散后，地面上站立一白衣青年，青年目光炯炯有神，散发出飘逸不凡的气质，他神态冰冷，目光在铁柱等三少年身上一扫，尤其是在机灵少年身上鼓鼓之物处看了眼，冷声道：“王家的三个名额，就是他们？”</p><p> “这就是仙人？”对方一眼之下，王林只感觉身体一凉，心脏止不住的狂跳，小脸面无血色，呆呆的望着对方。</p><p> 再看那个一脸机灵之色的少年，也是双手放在裤边，毕恭毕敬，眼中露出狂热之色。</p><p> 唯有王卓，漫不经心的看了对方一眼，鼻子里轻哼一声。</p><p> 王卓的父亲连忙上前，满脸恭敬之色，寒蝉若惊道：“上仙，这三人正是王家推荐的族人。”</p><p> 青年点头，不耐烦的说道：“谁是王卓？”</p><p> 老者面上一喜，连忙拉着王卓说道：“上仙，这就是犬子王卓。”</p><p> 青年深深的看了王卓一眼，面色微缓，点头道：“王师弟果然一表人才，难怪能被道虚师叔看中。”</p><p> 王卓得意的看了看铁柱与另外那个机灵少年，自傲的说道：“那是自然，本少的修仙灵根，道虚仙人可是夸奖不已。”</p><p> 青年眉头一皱，但很快就舒展开，似笑非笑的望了王卓一眼，袖子一卷，带着三个少年腾云驾雾化作长虹，瞬间消失在原地。</p><p> 四叔抬头望着天空，喃喃自语道：“铁柱，一定要被选中啊！”</p><p> 王林感觉身子一轻，剧烈的罡风吹的脸上生痛，仔细一看，立刻震惊的发现自己居然被夹在青年的腋下，正在空中飞快前行，地面的村庄变成一个个巴掌大的黑点，飞快的向后移动。</p><p> 就这么一小会儿，他的眼睛就已经被风吹的通红，眼泪哗哗流下。</p><p> “你们三个不想眼睛瞎掉，就闭眼。”青年冰冷的声音传来。王林内心一颤，连忙闭上双眼，不敢再看，内心对于修仙，更加的向往了。</p><p> 时间不长，王林能感觉到青年略有气喘，速度也明显降了下来，接着眼前一花，青年迅速落下，在落地的一刻，青年松开手臂，三个少年摔落在地。</p><p> 好在摔落的力道不重，三人连忙爬起，展现在王林面前的，是一处宛如世外桃源般的仙境，青山绿水，鸟语花香。</p><p> 正前方，一座高耸入云的山峰，千岩竞秀，云雾缭绕，看不清细貌，时而传来一两声兽鸣。一条扭曲的石阶小径，自山峰蜿蜒而下，宛若画中景色，山明水秀。一种隔世之感悠然而生。</p><p> 远远向上看去，山峰顶端有座大殿，虽说被云雾遮掩，但阵阵七彩光芒闪烁，让人一看不由升起膜拜之意。</p><p> 大殿旁，一座横生而出的长条石桥仿若弯月般，延伸至虚空云雾之中，与另一座山峰相连。</p><p> 如此洞天福地，自然就是恒岳派的山门所在，恒岳派是赵国为数不多的修真门派之一，500年前曾一度统领整个赵国修真界，拥有数位元婴期老怪，风光无限，可惜随着时间的流逝，中间历经数场变故，时至今日，昔日的苍天大派，已经萎缩到只能勉强在修真界站稳脚跟的地步。</p><p> 不过尽管如此，恒岳派对于四周万里之内的凡人来说，依然还是可望而不可及。</p><p> “张师弟，这三个可是王家推荐的少年？”一个身穿黑衣的中年人，带着一丝仙风道骨之气，从山峰下飘然而至。</p><p> 青年脸上露出恭敬之色，说道：“三师兄，这三人正是王家推荐。”</p><p> 中年人目光一扫，在王卓的身上重点看了几眼，含笑道：“掌门知道你修炼到了关键处，让我来进行这次测试，你去修炼吧。”</p><p> 青年应诺，身体一动，顺着山峰小径，眨眼间就消失无影。</p><p> 王林呆呆的望着眼前的一幕，心潮澎湃，忽感有人拉自己衣服，扭头一看，正是那一脸机灵之色少年，少年眼中狂热之色更浓，低声道：“这就是仙人居住的地方，他奶奶的，我王浩说什么也在被选中！”说完，他摸了摸自己衣内鼓鼓之物。</p>','否'),(373,'2023-08-09 01:09:20',131,3,'第三章 测试','<p> 王卓对于眼前的景象，也是怔在当场，许久后才缓过神，内心傲气不知觉的收敛了很多。</p><p> 此时，又有几道长虹剑光临至，每道剑光消散后，都会现出恒岳派弟子，在他们的身边，毫无例外跟着几个十五六岁的少年。</p><p> 这些人有男有女，在落下的一刻均都是如王林三人般，呆呆的望着眼前的景物，脸上表情不一。</p><p> 带众人来此的恒岳派弟子零散的站在不远处，相互交谈打量这些少年。又等了一会，最终所有被推荐到此地的少年都来齐，此时黑衣中年人扫了一眼众人，声音不含任何感情，说道：“你们之中，只有极少的几个会被选中成为我恒岳派弟子。”</p><p> 众少年寒蝉若惊，王林更是内心忐忑，他数了下，测试的一共48人。</p><p> “修仙，首重天资，接下来第一项测试，就是看你们灵根是否充足。现在我点到谁，谁就到我近前来。”中年人面无表情，随意的点了一个少年。</p><p> 少年双腿微颤，小心翼翼的走了过去，中年人手按在少年头顶，淡然道：“不合格，到左面站好。”</p><p> 少年似乎一下子失去了所有的力气，神情黯淡，眼带茫然的走到左边，沉默不语。</p><p> 接着又一个少年被点中，忐忑不安的上前。</p><p> “不合格。”</p><p> “不合格。”</p><p> “不合格。”</p><p> 连续十多个人，均都不合格，中年人的右边，到现在为止一个人都没有。</p><p> 王卓被点中，他脸上傲气尽收，面色有些苍白，走上前。</p><p> 中年人手放在王卓头上后，忽然面露喜色，语气温和，说道：“你叫什么名字？”</p><p> 王卓连忙恭敬道：“回禀上仙，小子王卓。”</p><p> 中年人点头，笑道：“原来你就是道虚师叔提到过的王卓，恩，到右边站好。”</p><p> 王卓大喜，在所有人的羡慕目光中，走到右边，眼中傲气又现，轻蔑的望着众人，神情不可一世。</p><p> “妈的，他是走狗屎运了。”王浩撇了撇嘴，对王林低声道。</p><p> 王林内心更加紧张，他眼前浮现父母期待的目光，握紧了拳头。</p><p> “不错，你也去右边站好。”中年人惊喜的声音传来，在他面前是一个少女。</p><p> 时间过去不长，大部分少年都被测试完，可站在中年人右边的，只有两人。接下来，王浩被点中。</p><p> 王浩一路小跑，站在中年人面前，还没等对方测试，立刻跪在地上重重的磕了几个响头，大声道：“上仙仙福永享，寿与天齐，小子王浩，您测试这么多人，一定很辛苦，要不您休息一会？我不着急，没事。”</p><p> 中年人哑然失笑，测试了这么多人，均都是一脸紧张，惟独眼前这个少年虎头虎脑，最为机灵，居然还拍起了马屁。按在王浩头上，他摇头说道：“资质差些，不……”</p><p> 王浩一听说自己资质不行，内心立刻跌至低谷，还没等对方说完，立刻从怀里拿出一个玉盒，双手交上，机灵的说道：“上仙，这是家父偶然间在山中得到，尝试多次都打不开，小子特地从家里带来，献给上仙您。”</p><p> 中年人轻笑摇头，正要拒绝，但一扫玉盒，忽然瞳孔一阵收缩，抓起仔细一看，顿时面露喜色，说道：“不错，居然是一株有300年的灵芝，看这玉盒样子，应是被修真者封印在内，难怪你父亲打不开。”他语气一顿，略微沉吟，含笑道：“我身边缺个炼丹的小童，我看你比较机灵，可愿意做我小童？”</p><p> 王浩立即惊喜起来，跌宕起伏的差异，让他激动不已，大声说道：“愿意，上仙，我愿意。”</p><p> 中年人含笑点头，说道：“做我药童，也不会亏待你，可与其他弟子一样修炼门内仙术，你站在右边吧。”</p><p> 王浩内心兴奋，跑到右边，得意洋洋的瞪了王卓一眼。</p><p> 所有的失败者，均都面露惺惺之色，一个个催头丧气，更有甚者，已经泪流满面，哭泣不已。</p><p> 中年人眉头一皱，喝道：“哭泣者，直接送走！”</p><p> 站在不远处的恒岳派弟子，立即走出几人，抓起几个啼哭者，漫不经心的踏着剑光迅速消失。</p><p> 中年人随手一指，点中王林。</p><p> 王林深吸口气，紧张万分的走到中年人身边，他脑中一片空白，心里默默祈祷，眼前禁不住回想起父母期望的目光。</p><p> “我一定能被选中！”王林坚定的想到。</p><p> 对方手一按，面无表情吐出三个让王林如坠冰窟的字。</p><p> “不合格！”</p><p> 王林不知道自己是怎么走到左面队伍中，他只感觉耳边仿佛春雷般轰轰作响，回荡起伏间，尽是缭绕那三个字。</p><p> 不大一会，所有人都被测试完，站在右边的，只有三个人，这三个人，在失败者眼中，犹如天之骄子一般，高大无比。</p><p> 王卓更是轻蔑的望着王林，目中讥讽之意表露无疑。</p><p> “修仙，资质虽然重要，但毅力更为关键，你们这些资质平凡的少年，若是具备毅力，倒也可以成为记名弟子！这第二项测试，就是毅力！”中年人面无表情，顿了一下，又道：“顺着此处阶梯上去，达到顶端者，算合格，若第三天仍未完成，就是失败，失败者会被送回你们各自的家族。如果半途坚持不住或者遇到危险，就大声呼喊放弃，自会有人把你们带走。”</p><p> 说完，中年人含笑望着右边的三人，说道：“你们随我去见掌门，到时候会安排师父，王浩，你就不要去了，随我去丹房，熟悉一下操作。”</p><p> 中年人吩咐完，便带着三个天之骄子踏上山峰，消失匿迹。</p><p> 王林深吸口气，目光坚定，毫不犹豫踏步向石阶走去，进行第二项测试，毅力。</p><p> 除去三个天之骄子以及六个因哭泣被送走的少年外，还剩下39人。</p><p> 这39人中有催头丧气者，也有神情坚毅者，更有犹豫害怕者，彼此前后不一，渐渐踏上阶梯，走出各自不同的未来。</p>','否'),(374,'2023-08-09 01:09:20',131,4,'第四章 无情','<p> 石阶陡峭不平，两旁更是险境连连，稍有不慎就会失足掉落。</p><p> 走了不到半天，王林就感觉双腿如灌铅，挥汗如雨，上气不接下气般难以迈步，当初在山脚下看，这条石阶小径不长，可实际走在上面，却发现这小径好似没有尽头般，让人从心底不由产生绝望的思绪。</p><p> 在他的前面有十几个身体强壮的少年，也均都气喘吁吁，缓缓上爬。到现在为止，还没有一个放弃的。</p><p> 王林咬牙坚持，他知道这是自己最后一次机会，父母期望的眼神一直徘徊心中，就在这时，在他身后一个少年忽然脚下一颤，踩空，身体从一旁迅速落下，惊恐的尖叫顿时彻响。</p><p> “我放弃，救命！”</p><p> 所有人都停下脚步，不约而同的向下望去，只见一道乌光闪烁，一个恒岳派弟子不知从什么地方冲出，抓住身处半空的少年，身子轻轻的落在山脚下。</p><p> 王林面色苍白，沉默不语，小心翼翼的继续向上爬去，时间匆匆而过，两天后，他前面的十几个少年，已经看不到身影。</p><p> 王林不知道这些同伴到底有多少放弃的，他只知道，自己绝对不能放弃，尽管双腿双脚已经摸出血泡，钻心的刺痛时刻从破碎的血泡中传来，但他仍然坚持用手攀爬前行。</p><p> “稚子心坚，奈何大道无情，徒劳，徒劳罢了……”一声悠悠的叹息，远远的从山峰顶端飘落而下，一个面色蜡黄的中年人，身子轻飘飘的从石阶落下，在一个个少年身边飞快走过，面带感慨之色。</p><p> 在路过王林身边时，中年人略顿一下，眼前此子是他看到的第六个少年，但绝对是最狼狈的一个，全身鲜血淋淋，衣服已经被血液浸透，膝盖，脚指血肉模糊，完全是用着双手在一点点攀爬，中年人轻叹一声，问道：“孩子，你叫什么名字？”</p><p> 王林神情已经模糊，他心里只有一个念头，那就是死也要爬到山顶，对于中年人的问话，他根本就没听到，在他的眼里，除了这条石阶小径之外，别无他物。</p><p> 中年人注视王林双眼，对他的心念之坚颇为动容，手在王林头上一按，随后摇头自语道：“毅力绝佳，可惜资质太过普通，无缘，无缘啊……”他深深的看了眼王林，继续向石阶下走去。</p><p> 第二天夜晚，王林双手血肉模糊，他爬过的石阶，留下一道深深的血迹，对于这些，王林已经不知道了，他现在全凭一股意念在催动身体，气息已至弥留之际。</p><p> 在第三天日出的一刻，他模糊间似看到了石阶的尽头，可惜此时一个无情的声音如雷鸣般传来，震入心间。</p><p> “时间已到，只有三人合格，其余……失败！”</p><p> 王林惨笑一声，身子一歪，倒在石阶上，昏迷不醒。</p><p> 三天前测试天资的黑衣中年人，站在山顶，望着距离此处不到十丈的王林，眼露无情之色。</p><p> 这时几个恒岳派弟子迅速从山顶向下走去，一路上把所有还在坚持的少年带到山上，统一喂食药物。</p><p> “师兄，39个测试者，放弃25人，除了合格的三人外，还有11人。”一个恒岳派女弟子，冷声回报，她当年就经历过这样残酷的测试，最终靠着自小练习武术的底子，在毅力上勉强合格，才成为记名弟子，用了近十年的时间努力，到现在仍然未成为真正的弟子。</p><p> 黑衣中年人神态冰冷，略点头，目光一扫均都昏迷的11个少年，淡淡的开口道：“合格的三人，带他们去见杂务处，安排日后的工作。放弃的25人，送回各自家族。至于这坚持到最后的11人，待他们苏醒后，统一送到剑灵阁，看看有没有人与剑灵有缘，若是没有，依然还是送回各自家族。”</p><p> 说完，中年人看都不看这些少年一眼，拂袖而走。</p><p> 三天后，剑灵阁内，包括王林在内的11个少年，均都面色苍白的站在一旁，王林身上的伤势已经痊愈，但心灵的伤口却撕裂更大，阵阵钻心的痛，止不住的吞噬他的身心。</p><p> 这剑灵测试，并非黑衣中年人主持，而是一个身穿白衣的陌生青年，不过毫无例外的，都是面色冰冷，望向他们的眼光，犹如看蝼蚁般，无情。</p><p> “这是最后测试，能走进这房间者，合格。”青年言辞简短，脸上更是露出不耐烦之色。</p><p> 王林目光所及，是一处普通至极的房舍，房舍正中大门打开，向里望去，只见一把把长短不一的古剑，摆放在内。</p><p> 少年们一个个按照顺序，向房间走去，第一个少年刚刚走近房屋五丈处，就面露挣扎之色，被一股无形的力道推动退出几丈。</p><p> “不合格，下一个！”青年淡淡的说道。</p><p> 王林是第七个，之前的六人全部都是在五丈处无法前进，他苦涩一笑，提起心底剩余不多的期望，向前走去。</p><p> 五丈处，轻松踏过，王林一呆，内心期望迅速攀升，口干舌燥，心脏狂跳，又继续踏出一丈，此时仍未感觉任何不适。</p><p> 青年“咦”的一声，目光闪动，露出一丝感兴趣的神色，面容微缓，说道：“别犹豫，继续向里走，若是能走进房屋，获得剑灵认同，哪怕你之前两次测试都不合格，也会被收为真正的弟子！”</p><p> 其他十个少年，均都面露羡慕之色，这种羡慕之中，还藏有深深的嫉妒。</p><p> 王林内心紧张，父母期待的目光再次用入脑海，又踏出一丈，此时距离大门，还有三丈。王林忐忑，再次踏出一步。</p><p> 就在此时，一股庞大的力道忽然出现，疯狂的涌向王林，他身体不受控制的飞快退后，一直到十多丈处，才停了下来。</p><p> 站在一旁的其余少年，均都眼露嘲讽之色，在他们看来，王林就应该和自己一样，不可能有任何机会。</p><p> 惨笑一声，王林内心撕裂的伤口更大了，父母期待的目光渐渐从脑海中消散掉。</p><p> 青年神情又如之前般冰冷，淡淡说道：“不合格，下一个。”</p>','否'),(375,'2023-08-09 01:09:20',131,5,'第五章 回程','<p> 十一个人，最终没有一个合格，除了王林外，还有一个少女也同样踏入到两丈处，但结果依然。</p><p> 当天测试完，众少年就被遣散到山下，被恒岳派弟子一一送走，送王林回家族的，还是带他们来此地的那个张姓青年，在他的身边，跟着王卓与王浩。</p><p> “王卓师弟，恭喜你成为道虚师叔的弟子，以后前途不可限量。”青年含笑，抱拳道。</p><p> 王卓脸上露出不可一世的表情，傲然道：“那是自然，师父已经说了，只待我这次回家处理完俗事，便传我修仙法术。”</p><p> 王浩在一旁撇嘴，说道：“我从小就看不上你那副小人得志的表情，不就是有师父么，算什么大不了的，小爷还会炼丹呢。”</p><p> 王卓轻蔑的看了眼王浩，没理会他，而是目光转动，望着一旁沉默不语的王林，轻笑道：“铁柱，怎么样，之前我就和你说了，你没那块料，你和你爹都不信，现在知道结果了吧。”</p><p> 王林抬头，淡淡的看了眼王卓，对恒岳派青年说道：“上仙，我父母都在等我，还请您快些把我送回去吧。”</p><p> 王卓看见王林居然不理会自己，再次冷笑道：“土包子，这辈子就待在村子里像你爹一样当木匠吧。”</p><p> 青年脸中露出似笑非笑的表情，看了看眼前的三个少年，也没说话，袖子一卷，带着三人消失在恒岳派山门。</p><p> 回去的路上，罡风依旧，可王林的心绪，却是天地之别，来时期望，回时绝望。</p><p> 时间不长，王氏家族大宅子目光可及，王林睁开双眼，远远望去只见大宅子内人头怂恿，热闹似锦，一桌桌档次远远超过他爹前几日招待亲戚的宴席，把整个大院子都铺满。</p><p> 王氏家族所有人，甚至连那些在外地采购木料的族人也都回来，齐聚一堂相互庆祝，觥筹交错，熙来攘往。</p><p> 这次宴席的主角是三个人，王天水的大哥，王天水，以及他的三弟，在这三个人身边，所有的亲戚都相互上前庆祝，场面热闹非凡。</p><p> 他们眼中毫无例外都是露出羡慕之色，口中更是阿谀奉承，尽挑好词，尤其是对王林的父亲，更是磋叹不已，唏嘘往事。</p><p> “二哥，这次你家小子一定会被选中，以后你就不用干木匠活了，家里谁看见你不得叫一声二爷啊。”王林父亲的六弟，一个大腹便便的中年人，大声赞道。</p><p> “老二，当年我就看出你这辈子绝对不一般，怎么样，让我看对了吧，你这辈子应在铁柱身上了，铁柱成为仙人，你这当爹的，那可就了不得了。”王天水的五叔，眯个小眼睛，坐在王林父亲身边，举杯阿谀说道。</p><p> “二哥，你家铁柱和我家小子，这次都能被选中，咱哥俩有十几年没见了，这次说什么也要不醉不归。”王浩的父亲，王天水的三弟，端着酒杯来到面前，一脸的笑意，大声说道。</p><p> 铁柱父亲望着四周这些之前瞧不起他的亲戚们，颇感扬眉吐气，风光无限，多年的阴郁一扫而空，不过却始终有一块大石压在心头。</p><p> “铁柱啊，一定要被选中！”</p><p> “二嫂，你跟着我二哥这辈子算是享福了，有了铁柱这孩子，以后咱们十里八村的，谁不认识你啊。”</p><p> “就是，二嫂，你家娃娃可比我家小子有本事，铁柱这孩子从小就明聪，真是个好孩子啊。”</p><p> “铁柱娘，咱们虽说是同族，但现今同族通婚的多了去，我家闺女也到了年纪，铁柱这孩子仪表堂堂，我从小就喜欢，不如咱们两家结个亲家？”与铁柱父亲一样，铁柱母亲身边也围绕着一群女眷，相互热情的唠着乡间家常。</p><p> 铁柱的大哥，冷眼望着这一切，内心暗道等着吧，等仙人把孩子送回来，就知道结果了，到时候若是铁柱没被选中，看老二你如何收场。</p><p> 想到这里，他面上哈哈一笑，端起酒杯与身边夸奖他家孩子的亲戚，应承了几句。</p><p> 场面沸沸扬扬，繁闹不已。就在这时，忽然一道长虹从天际划过，落在大院子中，露出四人。</p><p> 四周瞬间安静下来，所有的王氏族人都兢兢战战，不敢说话。</p><p> 恒岳派青年目光一扫，暗自感叹，他当日被恒岳派收为弟子时，家乡人也是这样庆祝，一时之间颇为感慨，回头深深的看了眼王林，他知道这少年接下来要面对的事情，是成年人都无法承受的。</p><p> “大道无情……”青年摇头，身体一动，架起剑光离开此地。</p><p> “修道者不能有俗世牵挂，你们各自处理好，三天后，我再来接你们。”远远的，传来他的声音。</p><p> 铁柱父亲的大哥，一看到仙人离开，立即走出激动的望着自己儿子，问道：“道虚上仙可收你为徒？”</p><p> 王卓一脸自得之色，傲道：“那是自然，师父说我十年内，将会成为恒岳派弟子中的翘楚。”</p><p> 王卓父亲大喜，重重的拍了拍儿子的肩膀，开怀道：“好！王卓你以后就是仙人了，咱们王家，有仙人了，哈哈。”</p><p> 王浩的父亲，此时也是一脸焦急之色，盯着王浩，正要询问，王浩打了个哈欠，得意道：“爹，不用问了，你儿子已经是恒岳派弟子了。”</p><p> 王浩父亲狂喜，拿起酒杯狠狠的喝了一口，王卓目露轻蔑之色，阴阳怪调的说道：“三叔，你生了个好儿子，把我们王家的脸都丢光了，当着所有人面大拍仙人马屁，最后又送礼，这才勉强获得一个药童的资格。”</p><p> 王浩眉毛一挑，讥讽道：“我乐意，怎么的，到时候看看谁的仙法厉害就知道谁给王家丢脸了。”</p><p> 铁柱的父亲，一直望着自家娃，他从铁柱脸上看到一丝没落，内心一颤，升起一股不妙的预感。</p><p> “铁柱，你……你怎么样？”铁柱他娘，满怀期望的问道。</p><p><br></p>','否'),(376,'2023-08-09 01:09:20',131,6,'第六章 势利','<p> 铁柱沉默，王卓在一旁讥讽道：“这小子我早就说了，没那块料，现在可好，白白去丢人显眼，我是第一次测试就被收取了，没看到他后面几次测试，不过听说是三项测试没一个合格的，早听我的，都不如不去，我约莫四叔家的虎子去都比他强。”</p><p> 铁柱的四叔，眉头一皱，喝道：“王卓，即便你成为仙人，也别在我面前放肆。我家虎子有没有那块料，该你屁事，没大没小的。”</p><p> 王卓目中寒光一闪，冷笑几句没有说话。</p><p> 铁柱的父亲，一下子似乎苍老了十多岁，瘫坐在椅子上。铁柱母亲，也是怔住了，似乎不敢相信，问道：“铁柱……是……是真的么？”</p><p> 铁柱紧咬下唇，浑不在意鲜血留下，噗通一声跪在地上，重重的磕了几个头，低声说道：“爹，娘，铁柱没被仙人收入，对不起你们……我……我来生再报你们养育之恩。”</p><p> 铁柱他娘察觉到自己孩子语气的绝望，立刻跑过去，把铁柱抱起，呜咽道：“娃儿，没事，不用难过，不就是没被仙人收入么，等明年咱们去县里大考，也是一样，娃儿，你可千万别做傻事，想开点，你爹和娘以后还指望你送终呢。”</p><p> 铁柱他爹此时也恢复过来，看着铁柱的神情，内心一震，连忙过去抱着铁柱，焦急的说道：“铁柱，你可别做傻事，一切有爹呢，听爹的话，咱回家好好读书，明年大考也是一样。”</p><p> 四周的亲戚，一个个嘴脸变的极快，纷纷远离铁柱爹娘，脸上均露出看热闹的神态，闲言碎语，议论纷纷。</p><p> “铁柱这孩子，我之前就觉得不行，他怎么能和大哥家的王卓比啊，这次算是丢人丢到家了。”铁柱父亲的六弟，嘲讽道。</p><p> “就是，早知道是这样，就别弄的好像真的被收入似的，多丢人啊，老二，你都这么大年纪的人了，怎么尽办些蠢事，难怪当初你爹没把家产分给你。”铁柱父亲的三叔，面露厌恶之色，讥讽道。</p><p> “要我说，这孩子从小聪明这事，十有八九是假的，估计是老二觉得自己这辈子没啥出息，所以把自己娃娃一顿吹嘘，现在可好，被揭穿了吧。”刚才坐在铁柱父亲身边的五叔，嘴脸立刻变换，一改刚才阿谀之色。</p><p> “三个娃娃去测试，就他一人儿失败，铁柱这孩子，是咱们王家最差的一个了，丢人啊，二嫂子啊，刚才我还说你和二哥在一起享福，现在一看，你这辈子也就这样了，没那个福气。”女眷中有人嘲讽道。</p><p> “可不是么，前几天我还去他们村里看到铁柱了，当时我就寻思着这孩子傻啦吧唧的，怎么能和王卓和王浩那两个娃娃比，准成不了。”铁柱的五叔嫂，也换上嘴脸，讥讽起来。</p><p> “我早就看出铁柱这娃娃不行，你们看看他爹他娘，就那样还能生出个什么好娃子呢，咱们王家，也就大哥和老三家的孩子有出息，铁柱，呸，就这名字看起来就傻里傻气的。”女眷中另一人，也不甘落后嘲讽道。</p><p> “我刚才是瞎了眼了，还要把自己闺女往火坑里推，幸好这铁柱没被仙人收入，不然我闺女以后还不得恨我一辈子啊，铁柱他娘，亲家这事，咱就这么算了，你家娃娃既然当不成仙人，谁会把闺女许给他啊，这不是癞蛤蟆想吃天鹅肉么。”</p><p> 一时之间，几乎所有的亲戚都一个个露出势利的嘴脸，各种恶毒的话语越来越严重，无情的打击着铁柱一家人。</p><p> 这一幕，与刚才的奉承相比，天地之差。更有甚者，干脆撕破脸皮直接开口就索要之前赠送的礼品，听的铁柱爹娘面无血色，王林握紧了拳头，内心的伤痛，更加剧烈，他仿佛有一种要死了的感觉，耳边传来的尽是嘲讽的话语。</p><p> 王卓的父亲，内心冷笑，漫不经心的说道：“老二，之前我就说了，仙人收徒讲究缘分，要求很严格的，除非像我儿子这样优秀，否则根本就没有半点机会，你可倒好，还真当回事了，现在弄得孩子都绝望的活不下去了，何必呢？”</p><p> 铁柱的父亲忍无可忍，猛的回头，怒目而视，喝道：“王天山，你给我住口，当年爹临终前明明把家产留给我一份，你费尽苦心联系亲戚抢走我那份，今天还在这里冷嘲热讽，你真当我王天水没血性么！</p><p> 还有你们这些亲戚，刚才阿谀奉承，现在冷嘲热讽，我家娃都这样了，你们还在那里落井下石，难道就没有一点人性么！”</p><p> 王天山语气一滞，怒声道：“以前的事提那么多干什么，你家娃娃本就不是那块料，我好心劝你，你非但不感谢，反而冲我发火，哼，上梁不正下梁歪，爹这怂样，儿子也好不到哪去！”</p><p> 周围传来的不屑嘲笑以及讥讽，落在呆呆站在原地的王林耳中，恍如一根根利刺狠狠的扎在心脏一般，他强忍内心撕裂的剧痛，冷眼看这一切，记住了每一个亲戚的嘴脸。</p><p> “你！！我和你拼了！”铁柱他爹抄起一旁板凳，就要冲上去，铁柱四叔连忙冲出，拦住后低声道：“二哥，你别冲动，老大家中仆人很多，别吃亏了，有我呢，你看我的。”</p><p> 说完，他瞪着王天山，说道：“大哥，有你这么说话的么，我老四听不下去了，你要是再敢在我面前辱我二哥，别怪我不讲兄弟情分，王家虽大，但老四我这几年结识的江湖朋友也不少，可别被一把火烧个干净！”</p><p> 王天山诺诺了几句，内心对这个交友广泛的四弟很是忌惮。</p><p> “老四，你这话就不对了，老二家的娃娃，本就不是那块料，我们说说难道还错了？这娃不行，还不允许我们长辈说说，这可太没道理了。”辈分最老的三祖叔，不满的说道。</p>','是'),(377,'2023-08-09 01:09:20',7,7,'章节标题7','章节内容7','是'),(378,'2023-08-09 01:09:20',8,8,'章节标题8','章节内容8','是');
+/*!40000 ALTER TABLE `chaptertushuxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `config`
+--
+
+DROP TABLE IF EXISTS `config`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `config` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` varchar(100) NOT NULL COMMENT '配置参数名称',
+  `value` varchar(100) DEFAULT NULL COMMENT '配置参数值',
+  `url` varchar(500) DEFAULT NULL COMMENT 'url',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='配置文件';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `config`
+--
+
+LOCK TABLES `config` WRITE;
+/*!40000 ALTER TABLE `config` DISABLE KEYS */;
+INSERT INTO `config` VALUES (1,'picture1','upload/picture1.jpg',NULL),(2,'picture2','upload/picture2.jpg',NULL),(3,'picture3','upload/picture3.jpg',NULL),(7,'APIKey','ihML0NfEM0jokUAuBD9tbYtW',NULL),(8,'SecretKey','WK2bRUFf2uNe3oEoQXULpi8Y37aCvFdD',NULL);
+/*!40000 ALTER TABLE `config` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dianyingxinxi`
+--
+
+DROP TABLE IF EXISTS `dianyingxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dianyingxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `dianyingmingcheng` varchar(200) NOT NULL COMMENT '电影名称',
+  `dianyingfenlei` varchar(200) NOT NULL COMMENT '电影分类',
+  `dianyingbiaoqian` varchar(200) NOT NULL COMMENT '电影标签',
+  `dianyinghaibao` longtext COMMENT '电影海报',
+  `dianyingwenjian` longtext COMMENT '电影文件',
+  `dianyingdaoyan` varchar(200) DEFAULT NULL COMMENT '电影导演',
+  `yanyuanzhenrong` varchar(200) DEFAULT NULL COMMENT '演员阵容',
+  `yugaoshipin` longtext COMMENT '预告视频',
+  `shangyingriqi` date DEFAULT NULL COMMENT '上映日期',
+  `fangyingchangci` datetime DEFAULT NULL COMMENT '放映场次',
+  `dianyingjieshao` longtext COMMENT '电影介绍',
+  `clicktime` datetime DEFAULT NULL COMMENT '最近点击时间',
+  `reversetime` datetime DEFAULT NULL COMMENT '倒计结束时间',
+  `clicknum` int(11) DEFAULT '0' COMMENT '点击次数',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8 COMMENT='电影信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dianyingxinxi`
+--
+
+LOCK TABLES `dianyingxinxi` WRITE;
+/*!40000 ALTER TABLE `dianyingxinxi` DISABLE KEYS */;
+INSERT INTO `dianyingxinxi` VALUES (101,'2023-08-09 01:09:19','电影名称1','电影分类1','电影标签1','upload/dianyingxinxi_dianyinghaibao1.jpg,upload/dianyingxinxi_dianyinghaibao2.jpg,upload/dianyingxinxi_dianyinghaibao3.jpg','','电影导演1','演员阵容1','','2023-08-09','2023-08-09 09:09:19','电影介绍1','2023-08-09 09:09:19','2023-08-10 00:00:00',1,0),(102,'2023-08-09 01:09:19','电影名称2','电影分类2','电影标签2','upload/dianyingxinxi_dianyinghaibao2.jpg,upload/dianyingxinxi_dianyinghaibao3.jpg,upload/dianyingxinxi_dianyinghaibao4.jpg','','电影导演2','演员阵容2','','2023-08-09','2023-08-09 09:09:19','电影介绍2','2023-08-09 09:09:19','2023-08-10 00:00:00',2,0),(103,'2023-08-09 01:09:19','电影名称3','电影分类3','电影标签3','upload/dianyingxinxi_dianyinghaibao3.jpg,upload/dianyingxinxi_dianyinghaibao4.jpg,upload/dianyingxinxi_dianyinghaibao5.jpg','','电影导演3','演员阵容3','','2023-08-09','2023-08-09 09:09:19','电影介绍3','2023-08-09 09:09:19','2023-08-10 00:00:00',3,0),(104,'2023-08-09 01:09:19','电影名称4','电影分类4','电影标签4','upload/dianyingxinxi_dianyinghaibao4.jpg,upload/dianyingxinxi_dianyinghaibao5.jpg,upload/dianyingxinxi_dianyinghaibao6.jpg','','电影导演4','演员阵容4','','2023-08-09','2023-08-09 09:09:19','电影介绍4','2023-08-09 09:09:19','2023-08-10 00:00:00',4,0),(105,'2023-08-09 01:09:19','电影名称5','电影分类5','电影标签5','upload/dianyingxinxi_dianyinghaibao5.jpg,upload/dianyingxinxi_dianyinghaibao6.jpg,upload/dianyingxinxi_dianyinghaibao7.jpg','','电影导演5','演员阵容5','','2023-08-09','2023-08-09 09:09:19','电影介绍5','2023-08-09 09:09:19','2023-08-10 00:00:00',5,0),(106,'2023-08-09 01:09:19','电影名称6','电影分类6','电影标签6','upload/dianyingxinxi_dianyinghaibao6.jpg,upload/dianyingxinxi_dianyinghaibao7.jpg,upload/dianyingxinxi_dianyinghaibao8.jpg','','电影导演6','演员阵容6','','2023-08-09','2023-08-09 09:09:19','电影介绍6','2023-08-09 09:09:19','2023-08-10 00:00:00',6,0),(107,'2023-08-09 01:09:19','电影名称7','电影分类7','电影标签7','upload/dianyingxinxi_dianyinghaibao7.jpg,upload/dianyingxinxi_dianyinghaibao8.jpg,upload/dianyingxinxi_dianyinghaibao9.jpg','','电影导演7','演员阵容7','','2023-08-09','2023-08-09 09:09:19','电影介绍7','2023-08-09 09:09:19','2023-08-10 00:00:00',7,0),(108,'2023-08-09 01:09:19','电影名称8','电影分类8','电影标签8','upload/dianyingxinxi_dianyinghaibao8.jpg,upload/dianyingxinxi_dianyinghaibao9.jpg,upload/dianyingxinxi_dianyinghaibao10.jpg','','电影导演8','演员阵容8','','2023-08-09','2023-08-09 09:09:19','电影介绍8','2023-08-09 09:09:19','2023-08-10 00:00:00',8,0);
+/*!40000 ALTER TABLE `dianyingxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dingdanxinxi`
+--
+
+DROP TABLE IF EXISTS `dingdanxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dingdanxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `dingdanbianhao` varchar(200) DEFAULT NULL COMMENT '订单编号',
+  `shangpinmingcheng` varchar(200) DEFAULT NULL COMMENT '商品名称',
+  `qiandaotupian` longtext COMMENT '签到图片',
+  `shangpinjiage` double DEFAULT NULL COMMENT '商品价格',
+  `xiangjiajiage` double NOT NULL COMMENT '相加价格',
+  `shangjiariqi` date DEFAULT NULL COMMENT '上架日期',
+  `alllimittimes` int(11) DEFAULT NULL COMMENT '购买数量',
+  `yonghujifen` double DEFAULT NULL COMMENT '订单金额',
+  `xiadanriqi` date DEFAULT NULL COMMENT '下单日期',
+  `dingdanbeizhu` varchar(200) DEFAULT NULL COMMENT '订单备注',
+  `yonghuming` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `goumairen` varchar(200) NOT NULL COMMENT '购买人',
+  `sfsh` varchar(200) DEFAULT '待审核' COMMENT '是否审核',
+  `shhf` longtext COMMENT '审核回复',
+  `ispay` varchar(200) DEFAULT '未支付' COMMENT '是否支付',
+  `longitude` double DEFAULT NULL COMMENT '经度',
+  `latitude` double DEFAULT NULL COMMENT '纬度',
+  `fulladdress` varchar(200) DEFAULT NULL COMMENT '地址',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `dingdanbianhao` (`dingdanbianhao`)
+) ENGINE=InnoDB AUTO_INCREMENT=159 DEFAULT CHARSET=utf8 COMMENT='订单信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dingdanxinxi`
+--
+
+LOCK TABLES `dingdanxinxi` WRITE;
+/*!40000 ALTER TABLE `dingdanxinxi` DISABLE KEYS */;
+INSERT INTO `dingdanxinxi` VALUES (151,'2023-08-09 01:09:19','1111111111','商品名称1','upload/dingdanxinxi_qiandaotupian1.jpg,upload/dingdanxinxi_qiandaotupian2.jpg,upload/dingdanxinxi_qiandaotupian3.jpg',1,1,'2023-08-09',99,1,'2023-08-09','订单备注1','用户名1','购买人1','否','','未支付',1,1,'宇宙银河系地球1号'),(152,'2023-08-09 01:09:19','2222222222','商品名称2','upload/dingdanxinxi_qiandaotupian2.jpg,upload/dingdanxinxi_qiandaotupian3.jpg,upload/dingdanxinxi_qiandaotupian4.jpg',2,2,'2023-08-09',99,2,'2023-08-09','订单备注2','用户名2','购买人2','是','','未支付',2,2,'宇宙银河系地球2号'),(153,'2023-08-09 01:09:19','3333333333','商品名称3','upload/dingdanxinxi_qiandaotupian3.jpg,upload/dingdanxinxi_qiandaotupian4.jpg,upload/dingdanxinxi_qiandaotupian5.jpg',3,3,'2023-08-09',99,3,'2023-08-09','订单备注3','用户名3','购买人3','是','','未支付',3,3,'宇宙银河系地球3号'),(154,'2023-08-09 01:09:19','4444444444','商品名称4','upload/dingdanxinxi_qiandaotupian4.jpg,upload/dingdanxinxi_qiandaotupian5.jpg,upload/dingdanxinxi_qiandaotupian6.jpg',4,4,'2023-08-09',99,4,'2023-08-09','订单备注4','用户名4','购买人4','是','','未支付',4,4,'宇宙银河系地球4号'),(155,'2023-08-09 01:09:19','5555555555','商品名称5','upload/dingdanxinxi_qiandaotupian5.jpg,upload/dingdanxinxi_qiandaotupian6.jpg,upload/dingdanxinxi_qiandaotupian7.jpg',5,5,'2023-08-09',99,5,'2023-08-09','订单备注5','用户名5','购买人5','是','','未支付',5,5,'宇宙银河系地球5号'),(156,'2023-08-09 01:09:19','6666666666','商品名称6','upload/dingdanxinxi_qiandaotupian6.jpg,upload/dingdanxinxi_qiandaotupian7.jpg,upload/dingdanxinxi_qiandaotupian8.jpg',6,6,'2023-08-09',99,6,'2023-08-09','订单备注6','用户名6','购买人6','是','','未支付',6,6,'宇宙银河系地球6号'),(157,'2023-08-09 01:09:19','7777777777','商品名称7','upload/dingdanxinxi_qiandaotupian7.jpg,upload/dingdanxinxi_qiandaotupian8.jpg,upload/dingdanxinxi_qiandaotupian9.jpg',7,7,'2023-08-09',99,7,'2023-08-09','订单备注7','用户名7','购买人7','是','','未支付',7,7,'宇宙银河系地球7号'),(158,'2023-08-09 01:09:19','8888888888','商品名称8','upload/dingdanxinxi_qiandaotupian8.jpg,upload/dingdanxinxi_qiandaotupian9.jpg,upload/dingdanxinxi_qiandaotupian10.jpg',8,8,'2023-08-23',99,8,'2023-08-23','订单备注8','用户名8','购买人8','是','','未支付',8,8,'宇宙银河系地球8号');
+/*!40000 ALTER TABLE `dingdanxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discussdianyingxinxi`
+--
+
+DROP TABLE IF EXISTS `discussdianyingxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discussdianyingxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `score` double DEFAULT NULL COMMENT '评分',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='电影信息评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discussdianyingxinxi`
+--
+
+LOCK TABLES `discussdianyingxinxi` WRITE;
+/*!40000 ALTER TABLE `discussdianyingxinxi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discussdianyingxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discussjingpaishangpin`
+--
+
+DROP TABLE IF EXISTS `discussjingpaishangpin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discussjingpaishangpin` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='竞拍商品评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discussjingpaishangpin`
+--
+
+LOCK TABLES `discussjingpaishangpin` WRITE;
+/*!40000 ALTER TABLE `discussjingpaishangpin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discussjingpaishangpin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discussshangpinxinxi`
+--
+
+DROP TABLE IF EXISTS `discussshangpinxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discussshangpinxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品信息评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discussshangpinxinxi`
+--
+
+LOCK TABLES `discussshangpinxinxi` WRITE;
+/*!40000 ALTER TABLE `discussshangpinxinxi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discussshangpinxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discusstuangoushangpin`
+--
+
+DROP TABLE IF EXISTS `discusstuangoushangpin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discusstuangoushangpin` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='团购商品评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discusstuangoushangpin`
+--
+
+LOCK TABLES `discusstuangoushangpin` WRITE;
+/*!40000 ALTER TABLE `discusstuangoushangpin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discusstuangoushangpin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discusstushuxinxi`
+--
+
+DROP TABLE IF EXISTS `discusstushuxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discusstushuxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='图书信息评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discusstushuxinxi`
+--
+
+LOCK TABLES `discusstushuxinxi` WRITE;
+/*!40000 ALTER TABLE `discusstushuxinxi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discusstushuxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discussyinlexinxi`
+--
+
+DROP TABLE IF EXISTS `discussyinlexinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `discussyinlexinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `refid` bigint(20) NOT NULL COMMENT '关联表id',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `avatarurl` longtext COMMENT '头像',
+  `nickname` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `content` longtext NOT NULL COMMENT '评论内容',
+  `reply` longtext COMMENT '回复内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='音乐信息评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discussyinlexinxi`
+--
+
+LOCK TABLES `discussyinlexinxi` WRITE;
+/*!40000 ALTER TABLE `discussyinlexinxi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discussyinlexinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dongwushibie`
+--
+
+DROP TABLE IF EXISTS `dongwushibie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dongwushibie` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `dongwumingcheng` varchar(200) DEFAULT NULL COMMENT '动物名称',
+  `dongwutupian` longtext COMMENT '动物图片',
+  `baikelianjie` varchar(200) DEFAULT NULL COMMENT '百科链接',
+  `baikexiangqing` longtext COMMENT '百科详情',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=209 DEFAULT CHARSET=utf8 COMMENT='动物识别';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dongwushibie`
+--
+
+LOCK TABLES `dongwushibie` WRITE;
+/*!40000 ALTER TABLE `dongwushibie` DISABLE KEYS */;
+INSERT INTO `dongwushibie` VALUES (201,'2023-08-09 01:09:19','动物名称1','upload/dongwushibie_dongwutupian1.jpg,upload/dongwushibie_dongwutupian2.jpg,upload/dongwushibie_dongwutupian3.jpg','百科链接1','百科详情1'),(202,'2023-08-09 01:09:19','动物名称2','upload/dongwushibie_dongwutupian2.jpg,upload/dongwushibie_dongwutupian3.jpg,upload/dongwushibie_dongwutupian4.jpg','百科链接2','百科详情2'),(203,'2023-08-09 01:09:19','动物名称3','upload/dongwushibie_dongwutupian3.jpg,upload/dongwushibie_dongwutupian4.jpg,upload/dongwushibie_dongwutupian5.jpg','百科链接3','百科详情3'),(204,'2023-08-09 01:09:19','动物名称4','upload/dongwushibie_dongwutupian4.jpg,upload/dongwushibie_dongwutupian5.jpg,upload/dongwushibie_dongwutupian6.jpg','百科链接4','百科详情4'),(205,'2023-08-09 01:09:19','动物名称5','upload/dongwushibie_dongwutupian5.jpg,upload/dongwushibie_dongwutupian6.jpg,upload/dongwushibie_dongwutupian7.jpg','百科链接5','百科详情5'),(206,'2023-08-09 01:09:19','动物名称6','upload/dongwushibie_dongwutupian6.jpg,upload/dongwushibie_dongwutupian7.jpg,upload/dongwushibie_dongwutupian8.jpg','百科链接6','百科详情6'),(207,'2023-08-09 01:09:19','动物名称7','upload/dongwushibie_dongwutupian7.jpg,upload/dongwushibie_dongwutupian8.jpg,upload/dongwushibie_dongwutupian9.jpg','百科链接7','百科详情7'),(208,'2023-08-09 01:09:19','动物名称8','upload/dongwushibie_dongwutupian8.jpg,upload/dongwushibie_dongwutupian9.jpg,upload/dongwushibie_dongwutupian10.jpg','百科链接8','百科详情8');
+/*!40000 ALTER TABLE `dongwushibie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `exampaper`
+--
+
+DROP TABLE IF EXISTS `exampaper`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `exampaper` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `name` varchar(200) NOT NULL COMMENT '试卷名称',
+  `time` int(11) NOT NULL COMMENT '考试时长(分钟)',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '试卷状态',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='试卷表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `exampaper`
+--
+
+LOCK TABLES `exampaper` WRITE;
+/*!40000 ALTER TABLE `exampaper` DISABLE KEYS */;
+INSERT INTO `exampaper` VALUES (1,'2023-08-09 01:09:19','十万个为什么',60,1);
+/*!40000 ALTER TABLE `exampaper` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examquestion`
+--
+
+DROP TABLE IF EXISTS `examquestion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examquestion` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `paperid` bigint(20) NOT NULL COMMENT '所属试卷id（外键）',
+  `papername` varchar(200) NOT NULL COMMENT '试卷名称',
+  `questionname` varchar(200) NOT NULL COMMENT '试题名称',
+  `options` longtext COMMENT '选项，json字符串',
+  `score` bigint(20) DEFAULT '0' COMMENT '分值',
+  `answer` varchar(200) DEFAULT NULL COMMENT '正确答案',
+  `analysis` longtext COMMENT '答案解析',
+  `type` bigint(20) DEFAULT '0' COMMENT '试题类型，0：单选题 1：多选题 2：判断题 3：填空题（暂不考虑多项填空）4:主观题',
+  `sequence` bigint(20) DEFAULT '100' COMMENT '试题排序，值越大排越前面',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='试题表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examquestion`
+--
+
+LOCK TABLES `examquestion` WRITE;
+/*!40000 ALTER TABLE `examquestion` DISABLE KEYS */;
+INSERT INTO `examquestion` VALUES (1,'2023-08-09 01:09:19',1,'十万个为什么','下面动物不属于昆虫的是（）。','[{\"text\":\"A.苍蝇\",\"code\":\"A\"},{\"text\":\"B.蜜蜂\",\"code\":\"B\"},{\"text\":\"C.蜂鸟\",\"code\":\"C\"}]',20,'C','蜂鸟',0,1),(2,'2023-08-09 01:09:19',1,'十万个为什么','油着火后可以用水扑灭。','[{\"text\":\"A.对\",\"code\":\"A\"},{\"text\":\"B.错\",\"code\":\"B\"}]',20,'B','油着火后不可以用水扑灭',2,2),(3,'2023-08-09 01:09:19',1,'十万个为什么','地球是个球体，中间是（ ）。','[]',30,'赤道','赤道',3,3),(4,'2023-08-09 01:09:19',1,'十万个为什么','下面动物中会流汗的有（ ）。','[{\"text\":\"A.马\",\"code\":\"A\"},{\"text\":\"B.猫\",\"code\":\"B\"},{\"text\":\"C.狗\",\"code\":\"C\"}]',30,'A,B','狗不会流汗',1,4),(5,'2023-08-09 01:09:19',1,'十万个为什么','世界上为什么不存在完美的圆？','[]',30,'','目前没有证据表明现实中存在完美的圆',4,5);
+/*!40000 ALTER TABLE `examquestion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examquestionbank`
+--
+
+DROP TABLE IF EXISTS `examquestionbank`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examquestionbank` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `questionname` varchar(200) NOT NULL COMMENT '试题名称',
+  `options` longtext COMMENT '选项，json字符串',
+  `score` bigint(20) DEFAULT '0' COMMENT '分值',
+  `answer` varchar(200) DEFAULT NULL COMMENT '正确答案',
+  `analysis` longtext COMMENT '答案解析',
+  `type` bigint(20) DEFAULT '0' COMMENT '试题类型，0：单选题 1：多选题 2：判断题 3：填空题（暂不考虑多项填空） 4:主观题',
+  `sequence` bigint(20) DEFAULT '100' COMMENT '试题排序，值越大排越前面',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='试题库表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examquestionbank`
+--
+
+LOCK TABLES `examquestionbank` WRITE;
+/*!40000 ALTER TABLE `examquestionbank` DISABLE KEYS */;
+INSERT INTO `examquestionbank` VALUES (1,'2023-08-09 01:09:19','下面动物不属于昆虫的是（）。','[{\"text\":\"A.苍蝇\",\"code\":\"A\"},{\"text\":\"B.蜜蜂\",\"code\":\"B\"},{\"text\":\"C.蜂鸟\",\"code\":\"C\"}]',20,'C','蜂鸟',0,1),(2,'2023-08-09 01:09:19','油着火后可以用水扑灭。','[{\"text\":\"A.对\",\"code\":\"A\"},{\"text\":\"B.错\",\"code\":\"B\"}]',20,'B','油着火后不可以用水扑灭',2,2),(3,'2023-08-09 01:09:19','地球是个球体，中间是（ ）。','[]',30,'赤道','赤道',3,3),(4,'2023-08-09 01:09:19','下面动物中会流汗的有（ ）。','[{\"text\":\"A.马\",\"code\":\"A\"},{\"text\":\"B.猫\",\"code\":\"B\"},{\"text\":\"C.狗\",\"code\":\"C\"}]',30,'A,B','狗不会流汗',1,4),(5,'2023-08-09 01:09:19','世界上为什么不存在完美的圆？','[]',30,'','目前没有证据表明现实中存在完美的圆',4,5);
+/*!40000 ALTER TABLE `examquestionbank` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examrecord`
+--
+
+DROP TABLE IF EXISTS `examrecord`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examrecord` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `username` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `paperid` bigint(20) NOT NULL COMMENT '试卷id（外键）',
+  `papername` varchar(200) NOT NULL COMMENT '试卷名称',
+  `questionid` bigint(20) NOT NULL COMMENT '试题id（外键）',
+  `questionname` varchar(200) NOT NULL COMMENT '试题名称',
+  `options` longtext COMMENT '选项，json字符串',
+  `score` bigint(20) DEFAULT '0' COMMENT '分值',
+  `answer` varchar(200) DEFAULT NULL COMMENT '正确答案',
+  `analysis` longtext COMMENT '答案解析',
+  `ismark` bigint(20) DEFAULT '0' COMMENT '是否批卷',
+  `type` bigint(20) DEFAULT '0' COMMENT '试题类型，0：单选题 1：多选题 2：判断题 3：填空题（暂不考虑多项填空） 4:主观题',
+  `myscore` bigint(20) NOT NULL DEFAULT '0' COMMENT '试题得分',
+  `myanswer` varchar(200) DEFAULT NULL COMMENT '考生答案',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考试记录表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examrecord`
+--
+
+LOCK TABLES `examrecord` WRITE;
+/*!40000 ALTER TABLE `examrecord` DISABLE KEYS */;
+/*!40000 ALTER TABLE `examrecord` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jingpaishangpin`
+--
+
+DROP TABLE IF EXISTS `jingpaishangpin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jingpaishangpin` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shangpinmingcheng` varchar(200) NOT NULL COMMENT '商品名称',
+  `shangpinfenlei` varchar(200) DEFAULT NULL COMMENT '商品分类',
+  `shangpintupian` longtext COMMENT '商品图片',
+  `shangpinguige` varchar(200) DEFAULT NULL COMMENT '商品规格',
+  `shangpinpinpai` varchar(200) DEFAULT NULL COMMENT '商品品牌',
+  `shangpinxiangqing` longtext COMMENT '商品详情',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8 COMMENT='竞拍商品';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jingpaishangpin`
+--
+
+LOCK TABLES `jingpaishangpin` WRITE;
+/*!40000 ALTER TABLE `jingpaishangpin` DISABLE KEYS */;
+INSERT INTO `jingpaishangpin` VALUES (121,'2023-08-09 01:09:19','商品名称1','商品分类1','upload/jingpaishangpin_shangpintupian1.jpg,upload/jingpaishangpin_shangpintupian2.jpg,upload/jingpaishangpin_shangpintupian3.jpg','商品规格1','商品品牌1','商品详情1',0),(122,'2023-08-09 01:09:19','商品名称2','商品分类2','upload/jingpaishangpin_shangpintupian2.jpg,upload/jingpaishangpin_shangpintupian3.jpg,upload/jingpaishangpin_shangpintupian4.jpg','商品规格2','商品品牌2','商品详情2',0),(123,'2023-08-09 01:09:19','商品名称3','商品分类3','upload/jingpaishangpin_shangpintupian3.jpg,upload/jingpaishangpin_shangpintupian4.jpg,upload/jingpaishangpin_shangpintupian5.jpg','商品规格3','商品品牌3','商品详情3',0),(124,'2023-08-09 01:09:19','商品名称4','商品分类4','upload/jingpaishangpin_shangpintupian4.jpg,upload/jingpaishangpin_shangpintupian5.jpg,upload/jingpaishangpin_shangpintupian6.jpg','商品规格4','商品品牌4','商品详情4',0),(125,'2023-08-09 01:09:19','商品名称5','商品分类5','upload/jingpaishangpin_shangpintupian5.jpg,upload/jingpaishangpin_shangpintupian6.jpg,upload/jingpaishangpin_shangpintupian7.jpg','商品规格5','商品品牌5','商品详情5',0),(126,'2023-08-09 01:09:19','商品名称6','商品分类6','upload/jingpaishangpin_shangpintupian6.jpg,upload/jingpaishangpin_shangpintupian7.jpg,upload/jingpaishangpin_shangpintupian8.jpg','商品规格6','商品品牌6','商品详情6',0),(127,'2023-08-09 01:09:19','商品名称7','商品分类7','upload/jingpaishangpin_shangpintupian7.jpg,upload/jingpaishangpin_shangpintupian8.jpg,upload/jingpaishangpin_shangpintupian9.jpg','商品规格7','商品品牌7','商品详情7',0),(128,'2023-08-09 01:09:19','商品名称8','商品分类8','upload/jingpaishangpin_shangpintupian8.jpg,upload/jingpaishangpin_shangpintupian9.jpg,upload/jingpaishangpin_shangpintupian10.jpg','商品规格8','商品品牌8','商品详情8',0);
+/*!40000 ALTER TABLE `jingpaishangpin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `kaoshifenshu`
+--
+
+DROP TABLE IF EXISTS `kaoshifenshu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `kaoshifenshu` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `yonghuming` varchar(200) NOT NULL COMMENT '用户名',
+  `kaoshimingcheng` varchar(200) DEFAULT NULL COMMENT '考试名称',
+  `yuwen` double NOT NULL COMMENT '语文',
+  `yuwenzhanbi` double NOT NULL COMMENT '语文占比',
+  `shuxue` double NOT NULL COMMENT '数学',
+  `shuxuezhanbi` double NOT NULL COMMENT '数学占比',
+  `yingyu` double NOT NULL COMMENT '英语',
+  `yingyuzhanbi` double NOT NULL COMMENT '英语占比',
+  `chengjizongfen` double DEFAULT NULL COMMENT '成绩总分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=239 DEFAULT CHARSET=utf8 COMMENT='考试分数';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kaoshifenshu`
+--
+
+LOCK TABLES `kaoshifenshu` WRITE;
+/*!40000 ALTER TABLE `kaoshifenshu` DISABLE KEYS */;
+INSERT INTO `kaoshifenshu` VALUES (231,'2023-08-09 01:09:19','用户名1','考试名称1',1,1,1,1,1,1,1),(232,'2023-08-09 01:09:19','用户名2','考试名称2',2,2,2,2,2,2,2),(233,'2023-08-09 01:09:19','用户名3','考试名称3',3,3,3,3,3,3,3),(234,'2023-08-09 01:09:19','用户名4','考试名称4',4,4,4,4,4,4,4),(235,'2023-08-09 01:09:19','用户名5','考试名称5',5,5,5,5,5,5,5),(236,'2023-08-09 01:09:19','用户名6','考试名称6',6,6,6,6,6,6,6),(237,'2023-08-09 01:09:19','用户名7','考试名称7',7,7,7,7,7,7,7),(238,'2023-08-09 01:09:19','用户名8','考试名称8',8,8,8,8,8,8,8);
+/*!40000 ALTER TABLE `kaoshifenshu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `kuabiaoceshi`
+--
+
+DROP TABLE IF EXISTS `kuabiaoceshi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `kuabiaoceshi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `ceshishijian` datetime DEFAULT NULL COMMENT '测试时间',
+  `xinxibeizhu` longtext COMMENT '信息备注',
+  `yonghuming` varchar(200) NOT NULL COMMENT '用户名',
+  `sfsh` varchar(200) DEFAULT '待审核' COMMENT '是否审核',
+  `shhf` longtext COMMENT '审核回复',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=179 DEFAULT CHARSET=utf8 COMMENT='跨表测试';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kuabiaoceshi`
+--
+
+LOCK TABLES `kuabiaoceshi` WRITE;
+/*!40000 ALTER TABLE `kuabiaoceshi` DISABLE KEYS */;
+INSERT INTO `kuabiaoceshi` VALUES (171,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注1','用户名1','是',''),(172,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注2','用户名2','是',''),(173,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注3','用户名3','是',''),(174,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注4','用户名4','是',''),(175,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注5','用户名5','是',''),(176,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注6','用户名6','是',''),(177,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注7','用户名7','是',''),(178,'2023-08-09 01:09:19','2023-08-09 09:09:19','信息备注8','用户名8','是','');
+/*!40000 ALTER TABLE `kuabiaoceshi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lajishibie`
+--
+
+DROP TABLE IF EXISTS `lajishibie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lajishibie` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shibiemingcheng` varchar(200) NOT NULL COMMENT '识别名称',
+  `shibiefenlei` varchar(200) DEFAULT NULL COMMENT '识别分类',
+  `shibietupian` longtext COMMENT '识别图片',
+  `shibiejianjie` longtext COMMENT '识别简介',
+  `chulifangshi` longtext COMMENT '处理方式',
+  `shibiexiangqing` longtext COMMENT '识别详情',
+  `faburiqi` date DEFAULT NULL COMMENT '发布日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=189 DEFAULT CHARSET=utf8 COMMENT='垃圾识别';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lajishibie`
+--
+
+LOCK TABLES `lajishibie` WRITE;
+/*!40000 ALTER TABLE `lajishibie` DISABLE KEYS */;
+INSERT INTO `lajishibie` VALUES (181,'2023-08-09 01:09:19','识别名称1','识别分类1','upload/lajishibie_shibietupian1.jpg,upload/lajishibie_shibietupian2.jpg,upload/lajishibie_shibietupian3.jpg','识别简介1','处理方式1','识别详情1','2023-08-09'),(182,'2023-08-09 01:09:19','识别名称2','识别分类2','upload/lajishibie_shibietupian2.jpg,upload/lajishibie_shibietupian3.jpg,upload/lajishibie_shibietupian4.jpg','识别简介2','处理方式2','识别详情2','2023-08-09'),(183,'2023-08-09 01:09:19','识别名称3','识别分类3','upload/lajishibie_shibietupian3.jpg,upload/lajishibie_shibietupian4.jpg,upload/lajishibie_shibietupian5.jpg','识别简介3','处理方式3','识别详情3','2023-08-09'),(184,'2023-08-09 01:09:19','识别名称4','识别分类4','upload/lajishibie_shibietupian4.jpg,upload/lajishibie_shibietupian5.jpg,upload/lajishibie_shibietupian6.jpg','识别简介4','处理方式4','识别详情4','2023-08-09'),(185,'2023-08-09 01:09:19','识别名称5','识别分类5','upload/lajishibie_shibietupian5.jpg,upload/lajishibie_shibietupian6.jpg,upload/lajishibie_shibietupian7.jpg','识别简介5','处理方式5','识别详情5','2023-08-09'),(186,'2023-08-09 01:09:19','识别名称6','识别分类6','upload/lajishibie_shibietupian6.jpg,upload/lajishibie_shibietupian7.jpg,upload/lajishibie_shibietupian8.jpg','识别简介6','处理方式6','识别详情6','2023-08-09'),(187,'2023-08-09 01:09:19','识别名称7','识别分类7','upload/lajishibie_shibietupian7.jpg,upload/lajishibie_shibietupian8.jpg,upload/lajishibie_shibietupian9.jpg','识别简介7','处理方式7','识别详情7','2023-08-09'),(188,'2023-08-09 01:09:19','识别名称8','识别分类8','upload/lajishibie_shibietupian8.jpg,upload/lajishibie_shibietupian9.jpg,upload/lajishibie_shibietupian10.jpg','识别简介8','处理方式8','识别详情8','2023-08-09');
+/*!40000 ALTER TABLE `lajishibie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `qiandaoxinxi`
+--
+
+DROP TABLE IF EXISTS `qiandaoxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `qiandaoxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `qiandaomingcheng` varchar(200) DEFAULT NULL COMMENT '签到名称',
+  `qiandaotupian` longtext COMMENT '签到图片',
+  `qiandaoshijian` datetime DEFAULT NULL COMMENT '签到时间',
+  `qiandaobeizhu` longtext COMMENT '签到备注',
+  `yonghuming` varchar(200) NOT NULL COMMENT '用户名',
+  `crossuserid` bigint(20) DEFAULT NULL COMMENT '跨表用户id',
+  `crossrefid` bigint(20) DEFAULT NULL COMMENT '跨表主键id',
+  `shhf` longtext COMMENT '回复内容',
+  `longitude` double DEFAULT NULL COMMENT '经度',
+  `latitude` double DEFAULT NULL COMMENT '纬度',
+  `fulladdress` varchar(200) DEFAULT NULL COMMENT '地址',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8 COMMENT='签到信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `qiandaoxinxi`
+--
+
+LOCK TABLES `qiandaoxinxi` WRITE;
+/*!40000 ALTER TABLE `qiandaoxinxi` DISABLE KEYS */;
+INSERT INTO `qiandaoxinxi` VALUES (161,'2023-08-09 01:09:19','签到名称1','upload/qiandaoxinxi_qiandaotupian1.jpg,upload/qiandaoxinxi_qiandaotupian2.jpg,upload/qiandaoxinxi_qiandaotupian3.jpg','2023-08-09 09:09:19','签到备注1','用户名1',1,1,'',1,1,'宇宙银河系地球1号'),(162,'2023-08-09 01:09:19','签到名称2','upload/qiandaoxinxi_qiandaotupian2.jpg,upload/qiandaoxinxi_qiandaotupian3.jpg,upload/qiandaoxinxi_qiandaotupian4.jpg','2023-08-09 09:09:19','签到备注2','用户名2',2,2,'',2,2,'宇宙银河系地球2号'),(163,'2023-08-09 01:09:19','签到名称3','upload/qiandaoxinxi_qiandaotupian3.jpg,upload/qiandaoxinxi_qiandaotupian4.jpg,upload/qiandaoxinxi_qiandaotupian5.jpg','2023-08-09 09:09:19','签到备注3','用户名3',3,3,'',3,3,'宇宙银河系地球3号'),(164,'2023-08-09 01:09:19','签到名称4','upload/qiandaoxinxi_qiandaotupian4.jpg,upload/qiandaoxinxi_qiandaotupian5.jpg,upload/qiandaoxinxi_qiandaotupian6.jpg','2023-08-09 09:09:19','签到备注4','用户名4',4,4,'',4,4,'宇宙银河系地球4号'),(165,'2023-08-09 01:09:19','签到名称5','upload/qiandaoxinxi_qiandaotupian5.jpg,upload/qiandaoxinxi_qiandaotupian6.jpg,upload/qiandaoxinxi_qiandaotupian7.jpg','2023-08-09 09:09:19','签到备注5','用户名5',5,5,'',5,5,'宇宙银河系地球5号'),(166,'2023-08-09 01:09:19','签到名称6','upload/qiandaoxinxi_qiandaotupian6.jpg,upload/qiandaoxinxi_qiandaotupian7.jpg,upload/qiandaoxinxi_qiandaotupian8.jpg','2023-08-09 09:09:19','签到备注6','用户名6',6,6,'',6,6,'宇宙银河系地球6号'),(167,'2023-08-09 01:09:19','签到名称7','upload/qiandaoxinxi_qiandaotupian7.jpg,upload/qiandaoxinxi_qiandaotupian8.jpg,upload/qiandaoxinxi_qiandaotupian9.jpg','2023-08-09 09:09:19','签到备注7','用户名7',7,7,'',7,7,'宇宙银河系地球7号'),(168,'2023-08-09 01:09:19','签到名称8','upload/qiandaoxinxi_qiandaotupian8.jpg,upload/qiandaoxinxi_qiandaotupian9.jpg,upload/qiandaoxinxi_qiandaotupian10.jpg','2023-08-09 09:09:19','签到备注8','用户名8',8,8,'',8,8,'宇宙银河系地球8号');
+/*!40000 ALTER TABLE `qiandaoxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `quming`
+--
+
+DROP TABLE IF EXISTS `quming`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `quming` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shiji` varchar(200) NOT NULL COMMENT '市级',
+  `quming` varchar(200) NOT NULL COMMENT '区名',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `quming` (`quming`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='区名';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quming`
+--
+
+LOCK TABLES `quming` WRITE;
+/*!40000 ALTER TABLE `quming` DISABLE KEYS */;
+INSERT INTO `quming` VALUES (31,'2023-08-09 01:09:19','市级1','区名1'),(32,'2023-08-09 01:09:19','市级2','区名2'),(33,'2023-08-09 01:09:19','市级3','区名3'),(34,'2023-08-09 01:09:19','市级4','区名4'),(35,'2023-08-09 01:09:19','市级5','区名5'),(36,'2023-08-09 01:09:19','市级6','区名6'),(37,'2023-08-09 01:09:19','市级7','区名7'),(38,'2023-08-09 01:09:19','市级8','区名8');
+/*!40000 ALTER TABLE `quming` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shangjia`
+--
+
+DROP TABLE IF EXISTS `shangjia`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shangjia` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shangjiamingcheng` varchar(200) NOT NULL COMMENT '商家名称',
+  `mima` varchar(200) NOT NULL COMMENT '密码',
+  `shangjiatupian` longtext COMMENT '商家图片',
+  `lianxidianhua` varchar(200) DEFAULT NULL COMMENT '联系电话',
+  `shangjiadizhi` varchar(200) DEFAULT NULL COMMENT '商家地址',
+  `shangjiawenjian` longtext COMMENT '商家文件',
+  `jingyingfanwei` longtext COMMENT '经营范围',
+  `quming` varchar(200) DEFAULT NULL COMMENT '区名',
+  `yonghudengji` varchar(200) DEFAULT NULL COMMENT '用户等级',
+  `shangjiajieshao` longtext COMMENT '商家介绍',
+  `status` int(11) DEFAULT '0' COMMENT '状态',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shangjiamingcheng` (`shangjiamingcheng`)
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COMMENT='商家';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shangjia`
+--
+
+LOCK TABLES `shangjia` WRITE;
+/*!40000 ALTER TABLE `shangjia` DISABLE KEYS */;
+INSERT INTO `shangjia` VALUES (51,'2023-08-09 01:09:19','商家名称1','123456','upload/shangjia_shangjiatupian1.jpg','13823888881','商家地址1','','经营范围1','区名1','初级','商家介绍1',0),(52,'2023-08-09 01:09:19','商家名称2','123456','upload/shangjia_shangjiatupian2.jpg','13823888882','商家地址2','','经营范围2','区名2','初级','商家介绍2',0),(53,'2023-08-09 01:09:19','商家名称3','123456','upload/shangjia_shangjiatupian3.jpg','13823888883','商家地址3','','经营范围3','区名3','初级','商家介绍3',0),(54,'2023-08-09 01:09:19','商家名称4','123456','upload/shangjia_shangjiatupian4.jpg','13823888884','商家地址4','','经营范围4','区名4','初级','商家介绍4',0),(55,'2023-08-09 01:09:19','商家名称5','123456','upload/shangjia_shangjiatupian5.jpg','13823888885','商家地址5','','经营范围5','区名5','初级','商家介绍5',0),(56,'2023-08-09 01:09:19','商家名称6','123456','upload/shangjia_shangjiatupian6.jpg','13823888886','商家地址6','','经营范围6','区名6','初级','商家介绍6',0),(57,'2023-08-09 01:09:19','商家名称7','123456','upload/shangjia_shangjiatupian7.jpg','13823888887','商家地址7','','经营范围7','区名7','初级','商家介绍7',0),(58,'2023-08-09 01:09:19','商家名称8','123456','upload/shangjia_shangjiatupian8.jpg','13823888888','商家地址8','','经营范围8','区名8','初级','商家介绍8',0);
+/*!40000 ALTER TABLE `shangjia` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shangpinfenlei`
+--
+
+DROP TABLE IF EXISTS `shangpinfenlei`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shangpinfenlei` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shangpinfenlei` varchar(200) NOT NULL COMMENT '商品分类',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shangpinfenlei` (`shangpinfenlei`)
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COMMENT='商品分类';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shangpinfenlei`
+--
+
+LOCK TABLES `shangpinfenlei` WRITE;
+/*!40000 ALTER TABLE `shangpinfenlei` DISABLE KEYS */;
+INSERT INTO `shangpinfenlei` VALUES (71,'2023-08-09 01:09:19','商品分类1'),(72,'2023-08-09 01:09:19','商品分类2'),(73,'2023-08-09 01:09:19','商品分类3'),(74,'2023-08-09 01:09:19','商品分类4'),(75,'2023-08-09 01:09:19','商品分类5'),(76,'2023-08-09 01:09:19','商品分类6'),(77,'2023-08-09 01:09:19','商品分类7'),(78,'2023-08-09 01:09:19','商品分类8');
+/*!40000 ALTER TABLE `shangpinfenlei` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shangpinxinxi`
+--
+
+DROP TABLE IF EXISTS `shangpinxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shangpinxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shangpinmingcheng` varchar(200) NOT NULL COMMENT '商品名称',
+  `shangpinfenlei` varchar(200) DEFAULT NULL COMMENT '商品分类',
+  `shangpintupian` longtext COMMENT '商品图片',
+  `shangpinguige` varchar(200) DEFAULT NULL COMMENT '商品规格',
+  `shangpinjiage` double NOT NULL COMMENT '商品价格',
+  `shangpinpinpai` varchar(200) DEFAULT NULL COMMENT '商品品牌',
+  `shangpinxiangqing` longtext COMMENT '商品详情',
+  `shangjiamingcheng` varchar(200) NOT NULL COMMENT '商家名称',
+  `shangjiariqi` date DEFAULT NULL COMMENT '上架日期',
+  `thumbsupnum` int(11) DEFAULT '0' COMMENT '赞',
+  `crazilynum` int(11) DEFAULT '0' COMMENT '踩',
+  `clicktime` datetime DEFAULT NULL COMMENT '最近点击时间',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8 COMMENT='商品信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shangpinxinxi`
+--
+
+LOCK TABLES `shangpinxinxi` WRITE;
+/*!40000 ALTER TABLE `shangpinxinxi` DISABLE KEYS */;
+INSERT INTO `shangpinxinxi` VALUES (91,'2023-08-09 01:09:19','商品名称1','商品分类1','upload/shangpinxinxi_shangpintupian1.jpg,upload/shangpinxinxi_shangpintupian2.jpg,upload/shangpinxinxi_shangpintupian3.jpg','商品规格1',1,'商品品牌1','商品详情1','商家名称1','2023-08-09',1,1,'2023-08-09 09:09:19',0),(92,'2023-08-09 01:09:19','商品名称2','商品分类2','upload/shangpinxinxi_shangpintupian2.jpg,upload/shangpinxinxi_shangpintupian3.jpg,upload/shangpinxinxi_shangpintupian4.jpg','商品规格2',2,'商品品牌2','商品详情2','商家名称2','2023-08-09',2,2,'2023-08-09 09:09:19',0),(93,'2023-08-09 01:09:19','商品名称3','商品分类3','upload/shangpinxinxi_shangpintupian3.jpg,upload/shangpinxinxi_shangpintupian4.jpg,upload/shangpinxinxi_shangpintupian5.jpg','商品规格3',3,'商品品牌3','商品详情3','商家名称3','2023-08-09',3,3,'2023-08-09 09:09:19',0),(94,'2023-08-09 01:09:19','商品名称4','商品分类4','upload/shangpinxinxi_shangpintupian4.jpg,upload/shangpinxinxi_shangpintupian5.jpg,upload/shangpinxinxi_shangpintupian6.jpg','商品规格4',4,'商品品牌4','商品详情4','商家名称4','2023-08-09',4,4,'2023-08-09 09:09:19',0),(95,'2023-08-09 01:09:19','商品名称5','商品分类5','upload/shangpinxinxi_shangpintupian5.jpg,upload/shangpinxinxi_shangpintupian6.jpg,upload/shangpinxinxi_shangpintupian7.jpg','商品规格5',5,'商品品牌5','商品详情5','商家名称5','2023-08-09',5,5,'2023-08-09 09:09:19',0),(96,'2023-08-09 01:09:19','商品名称6','商品分类6','upload/shangpinxinxi_shangpintupian6.jpg,upload/shangpinxinxi_shangpintupian7.jpg,upload/shangpinxinxi_shangpintupian8.jpg','商品规格6',6,'商品品牌6','商品详情6','商家名称6','2023-08-09',6,6,'2023-08-09 09:09:19',0),(97,'2023-08-09 01:09:19','商品名称7','商品分类7','upload/shangpinxinxi_shangpintupian7.jpg,upload/shangpinxinxi_shangpintupian8.jpg,upload/shangpinxinxi_shangpintupian9.jpg','商品规格7',7,'商品品牌7','商品详情7','商家名称7','2023-08-09',7,7,'2023-08-09 09:09:19',0),(98,'2023-08-09 01:09:19','商品名称8','商品分类8','upload/shangpinxinxi_shangpintupian8.jpg,upload/shangpinxinxi_shangpintupian9.jpg,upload/shangpinxinxi_shangpintupian10.jpg','商品规格8',8,'商品品牌8','商品详情8','商家名称8','2023-08-09',8,8,'2023-08-09 09:09:19',0);
+/*!40000 ALTER TABLE `shangpinxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shengfen`
+--
+
+DROP TABLE IF EXISTS `shengfen`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shengfen` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shengfen` varchar(200) NOT NULL COMMENT '省份',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shengfen` (`shengfen`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='省份';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shengfen`
+--
+
+LOCK TABLES `shengfen` WRITE;
+/*!40000 ALTER TABLE `shengfen` DISABLE KEYS */;
+INSERT INTO `shengfen` VALUES (11,'2023-08-09 01:09:19','省份1'),(12,'2023-08-09 01:09:19','省份2'),(13,'2023-08-09 01:09:19','省份3'),(14,'2023-08-09 01:09:19','省份4'),(15,'2023-08-09 01:09:19','省份5'),(16,'2023-08-09 01:09:19','省份6'),(17,'2023-08-09 01:09:19','省份7'),(18,'2023-08-09 01:09:19','省份8');
+/*!40000 ALTER TABLE `shengfen` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shibiefenlei`
+--
+
+DROP TABLE IF EXISTS `shibiefenlei`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shibiefenlei` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shibiefenlei` varchar(200) NOT NULL COMMENT '识别分类',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shibiefenlei` (`shibiefenlei`)
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='识别分类';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shibiefenlei`
+--
+
+LOCK TABLES `shibiefenlei` WRITE;
+/*!40000 ALTER TABLE `shibiefenlei` DISABLE KEYS */;
+INSERT INTO `shibiefenlei` VALUES (61,'2023-08-09 01:09:19','识别分类1'),(62,'2023-08-09 01:09:19','识别分类2'),(63,'2023-08-09 01:09:19','识别分类3'),(64,'2023-08-09 01:09:19','识别分类4'),(65,'2023-08-09 01:09:19','识别分类5'),(66,'2023-08-09 01:09:19','识别分类6'),(67,'2023-08-09 01:09:19','识别分类7'),(68,'2023-08-09 01:09:19','识别分类8');
+/*!40000 ALTER TABLE `shibiefenlei` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shiji`
+--
+
+DROP TABLE IF EXISTS `shiji`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shiji` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shengfen` varchar(200) NOT NULL COMMENT '省份',
+  `shiji` varchar(200) NOT NULL COMMENT '市级',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shiji` (`shiji`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='市级';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shiji`
+--
+
+LOCK TABLES `shiji` WRITE;
+/*!40000 ALTER TABLE `shiji` DISABLE KEYS */;
+INSERT INTO `shiji` VALUES (21,'2023-08-09 01:09:19','省份1','市级1'),(22,'2023-08-09 01:09:19','省份2','市级2'),(23,'2023-08-09 01:09:19','省份3','市级3'),(24,'2023-08-09 01:09:19','省份4','市级4'),(25,'2023-08-09 01:09:19','省份5','市级5'),(26,'2023-08-09 01:09:19','省份6','市级6'),(27,'2023-08-09 01:09:19','省份7','市级7'),(28,'2023-08-09 01:09:19','省份8','市级8');
+/*!40000 ALTER TABLE `shiji` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `storeup`
+--
+
+DROP TABLE IF EXISTS `storeup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `storeup` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `refid` bigint(20) DEFAULT NULL COMMENT '商品id',
+  `tablename` varchar(200) DEFAULT NULL COMMENT '表名',
+  `name` varchar(200) NOT NULL COMMENT '名称',
+  `picture` longtext NOT NULL COMMENT '图片',
+  `type` varchar(200) DEFAULT '1' COMMENT '类型(1:收藏,21:赞,22:踩,31:竞拍参与,41:关注)',
+  `inteltype` varchar(200) DEFAULT NULL COMMENT '推荐类型',
+  `remark` varchar(200) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='收藏表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `storeup`
+--
+
+LOCK TABLES `storeup` WRITE;
+/*!40000 ALTER TABLE `storeup` DISABLE KEYS */;
+/*!40000 ALTER TABLE `storeup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `systemintro`
+--
+
+DROP TABLE IF EXISTS `systemintro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `systemintro` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `title` varchar(200) NOT NULL COMMENT '标题',
+  `subtitle` varchar(200) DEFAULT NULL COMMENT '副标题',
+  `content` longtext NOT NULL COMMENT '内容',
+  `picture1` longtext COMMENT '图片1',
+  `picture2` longtext COMMENT '图片2',
+  `picture3` longtext COMMENT '图片3',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='关于我们';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `systemintro`
+--
+
+LOCK TABLES `systemintro` WRITE;
+/*!40000 ALTER TABLE `systemintro` DISABLE KEYS */;
+INSERT INTO `systemintro` VALUES (1,'2023-08-09 01:09:19','系统简介','SYSTEM INTRODUCTION','当遇到挫折或失败，你是看见失败还是看见机会?挫折是我们每个人成长的必经之路，它不是你想有就有，想没有就没有的。有句名言说的好，如果你想一生摆脱苦难，你就得是神或者是死尸。这句话形象地说明了挫折是伴随着人生的，是谁都逃不掉的。人生在世，从古到今，不分天子平民，机遇虽有不同，但总不免有身陷困境或遭遇难题之处，这时候唯有通权达变，才能使人转危为安，甚至反败为胜。大部分的人，一生当中，最痛苦的经验是失去所爱的人，其次是丢掉一份工作。其实，经得起考验的人，就算是被开除也不会惊慌，要学会面对。','upload/systemintro_picture1.jpg','upload/systemintro_picture2.jpg','upload/systemintro_picture3.jpg');
+/*!40000 ALTER TABLE `systemintro` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `token`
+--
+
+DROP TABLE IF EXISTS `token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `token` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `userid` bigint(20) NOT NULL COMMENT '用户id',
+  `username` varchar(100) NOT NULL COMMENT '用户名',
+  `tablename` varchar(100) DEFAULT NULL COMMENT '表名',
+  `role` varchar(100) DEFAULT NULL COMMENT '角色',
+  `token` varchar(200) NOT NULL COMMENT '密码',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增时间',
+  `expiratedtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '过期时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='token表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `token`
+--
+
+LOCK TABLES `token` WRITE;
+/*!40000 ALTER TABLE `token` DISABLE KEYS */;
+INSERT INTO `token` VALUES (1,1,'admin','users','管理员','wt64p41dc5chim0wl01aa3s8pasmluwm','2023-08-09 01:24:39','2023-08-09 04:00:34'),(2,41,'用户名1','yonghu','用户','h4hk3gkziw9u3nl3cmysls3q1nqorzfm','2023-08-09 03:00:21','2023-08-09 04:00:22'),(3,51,'商家名称1','shangjia','商家','qldkr7mt8q5pf861xxxzqu3m3c43aa64','2023-08-09 03:01:07','2023-08-09 04:01:08');
+/*!40000 ALTER TABLE `token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tuangoushangpin`
+--
+
+DROP TABLE IF EXISTS `tuangoushangpin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tuangoushangpin` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shangpinmingcheng` varchar(200) NOT NULL COMMENT '商品名称',
+  `shangpinfenlei` varchar(200) DEFAULT NULL COMMENT '商品分类',
+  `shangpintupian` longtext COMMENT '商品图片',
+  `shangpinguige` varchar(200) DEFAULT NULL COMMENT '商品规格',
+  `shangpinjiage` int(11) DEFAULT NULL COMMENT '商品价格',
+  `shangpinpinpai` varchar(200) DEFAULT NULL COMMENT '商品品牌',
+  `shangpinxiangqing` longtext COMMENT '商品详情',
+  `yonghuming` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8 COMMENT='团购商品';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tuangoushangpin`
+--
+
+LOCK TABLES `tuangoushangpin` WRITE;
+/*!40000 ALTER TABLE `tuangoushangpin` DISABLE KEYS */;
+INSERT INTO `tuangoushangpin` VALUES (111,'2023-08-09 01:09:19','商品名称1','商品分类1','upload/tuangoushangpin_shangpintupian1.jpg,upload/tuangoushangpin_shangpintupian2.jpg,upload/tuangoushangpin_shangpintupian3.jpg','商品规格1',1,'商品品牌1','商品详情1','用户名1',0),(112,'2023-08-09 01:09:19','商品名称2','商品分类2','upload/tuangoushangpin_shangpintupian2.jpg,upload/tuangoushangpin_shangpintupian3.jpg,upload/tuangoushangpin_shangpintupian4.jpg','商品规格2',2,'商品品牌2','商品详情2','用户名2',0),(113,'2023-08-09 01:09:19','商品名称3','商品分类3','upload/tuangoushangpin_shangpintupian3.jpg,upload/tuangoushangpin_shangpintupian4.jpg,upload/tuangoushangpin_shangpintupian5.jpg','商品规格3',3,'商品品牌3','商品详情3','用户名3',0),(114,'2023-08-09 01:09:19','商品名称4','商品分类4','upload/tuangoushangpin_shangpintupian4.jpg,upload/tuangoushangpin_shangpintupian5.jpg,upload/tuangoushangpin_shangpintupian6.jpg','商品规格4',4,'商品品牌4','商品详情4','用户名4',0),(115,'2023-08-09 01:09:19','商品名称5','商品分类5','upload/tuangoushangpin_shangpintupian5.jpg,upload/tuangoushangpin_shangpintupian6.jpg,upload/tuangoushangpin_shangpintupian7.jpg','商品规格5',5,'商品品牌5','商品详情5','用户名5',0),(116,'2023-08-09 01:09:19','商品名称6','商品分类6','upload/tuangoushangpin_shangpintupian6.jpg,upload/tuangoushangpin_shangpintupian7.jpg,upload/tuangoushangpin_shangpintupian8.jpg','商品规格6',6,'商品品牌6','商品详情6','用户名6',0),(117,'2023-08-09 01:09:19','商品名称7','商品分类7','upload/tuangoushangpin_shangpintupian7.jpg,upload/tuangoushangpin_shangpintupian8.jpg,upload/tuangoushangpin_shangpintupian9.jpg','商品规格7',7,'商品品牌7','商品详情7','用户名7',0),(118,'2023-08-09 01:09:19','商品名称8','商品分类8','upload/tuangoushangpin_shangpintupian8.jpg,upload/tuangoushangpin_shangpintupian9.jpg,upload/tuangoushangpin_shangpintupian10.jpg','商品规格8',8,'商品品牌8','商品详情8','用户名8',0);
+/*!40000 ALTER TABLE `tuangoushangpin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tushuxinxi`
+--
+
+DROP TABLE IF EXISTS `tushuxinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tushuxinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `tushumingcheng` varchar(200) NOT NULL COMMENT '图书名称',
+  `tushufenlei` varchar(200) DEFAULT NULL COMMENT '图书分类',
+  `zhuangtaixinxi` varchar(200) DEFAULT NULL COMMENT '状态信息',
+  `tushufengmian` longtext COMMENT '图书封面',
+  `tushuzuozhe` varchar(200) DEFAULT NULL COMMENT '图书作者',
+  `zhangjieneirong` longtext COMMENT '章节内容',
+  `faburiqi` date DEFAULT NULL COMMENT '发布日期',
+  `clicktime` datetime DEFAULT NULL COMMENT '最近点击时间',
+  `browseduration` int(11) DEFAULT '0' COMMENT '浏览时长',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8 COMMENT='图书信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tushuxinxi`
+--
+
+LOCK TABLES `tushuxinxi` WRITE;
+/*!40000 ALTER TABLE `tushuxinxi` DISABLE KEYS */;
+INSERT INTO `tushuxinxi` VALUES (131,'2023-08-09 01:09:19','图书名称1','图书分类1','已测试','upload/tushuxinxi_tushufengmian1.jpg,upload/tushuxinxi_tushufengmian2.jpg,upload/tushuxinxi_tushufengmian3.jpg','图书作者1','章节内容1','2023-08-09','2023-08-09 09:09:19',1,0),(132,'2023-08-09 01:09:19','图书名称2','图书分类2','已测试','upload/tushuxinxi_tushufengmian2.jpg,upload/tushuxinxi_tushufengmian3.jpg,upload/tushuxinxi_tushufengmian4.jpg','图书作者2','章节内容2','2023-08-09','2023-08-09 09:09:19',2,0),(133,'2023-08-09 01:09:19','图书名称3','图书分类3','已测试','upload/tushuxinxi_tushufengmian3.jpg,upload/tushuxinxi_tushufengmian4.jpg,upload/tushuxinxi_tushufengmian5.jpg','图书作者3','章节内容3','2023-08-09','2023-08-09 09:09:19',3,0),(134,'2023-08-09 01:09:19','图书名称4','图书分类4','已测试','upload/tushuxinxi_tushufengmian4.jpg,upload/tushuxinxi_tushufengmian5.jpg,upload/tushuxinxi_tushufengmian6.jpg','图书作者4','章节内容4','2023-08-09','2023-08-09 09:09:19',4,0),(135,'2023-08-09 01:09:19','图书名称5','图书分类5','已测试','upload/tushuxinxi_tushufengmian5.jpg,upload/tushuxinxi_tushufengmian6.jpg,upload/tushuxinxi_tushufengmian7.jpg','图书作者5','章节内容5','2023-08-09','2023-08-09 09:09:19',5,0),(136,'2023-08-09 01:09:19','图书名称6','图书分类6','已测试','upload/tushuxinxi_tushufengmian6.jpg,upload/tushuxinxi_tushufengmian7.jpg,upload/tushuxinxi_tushufengmian8.jpg','图书作者6','章节内容6','2023-08-09','2023-08-09 09:09:19',6,0),(137,'2023-08-09 01:09:19','图书名称7','图书分类7','已测试','upload/tushuxinxi_tushufengmian7.jpg,upload/tushuxinxi_tushufengmian8.jpg,upload/tushuxinxi_tushufengmian9.jpg','图书作者7','章节内容7','2023-08-09','2023-08-09 09:09:19',7,0),(138,'2023-08-09 01:09:19','图书名称8','图书分类8','已测试','upload/tushuxinxi_tushufengmian8.jpg,upload/tushuxinxi_tushufengmian9.jpg,upload/tushuxinxi_tushufengmian10.jpg','图书作者8','章节内容8','2023-08-09','2023-08-09 09:09:19',8,0);
+/*!40000 ALTER TABLE `tushuxinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `username` varchar(100) NOT NULL COMMENT '用户名',
+  `password` varchar(100) NOT NULL COMMENT '密码',
+  `role` varchar(100) DEFAULT '管理员' COMMENT '角色',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='用户表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','admin','管理员','2023-08-09 01:09:20'),(4,'xiezn','123456','管理员','2023-08-13 08:34:03');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wenzishibie`
+--
+
+DROP TABLE IF EXISTS `wenzishibie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wenzishibie` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `shibiemingcheng` varchar(200) DEFAULT NULL COMMENT '识别名称',
+  `shibietupian` longtext COMMENT '识别图片',
+  `baikelianjie` varchar(200) DEFAULT NULL COMMENT '百科链接',
+  `baikexiangqing` longtext COMMENT '百科详情',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=229 DEFAULT CHARSET=utf8 COMMENT='文字识别';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wenzishibie`
+--
+
+LOCK TABLES `wenzishibie` WRITE;
+/*!40000 ALTER TABLE `wenzishibie` DISABLE KEYS */;
+INSERT INTO `wenzishibie` VALUES (221,'2023-08-09 01:09:19','识别名称1','upload/wenzishibie_shibietupian1.jpg,upload/wenzishibie_shibietupian2.jpg,upload/wenzishibie_shibietupian3.jpg','百科链接1','百科详情1'),(222,'2023-08-09 01:09:19','识别名称2','upload/wenzishibie_shibietupian2.jpg,upload/wenzishibie_shibietupian3.jpg,upload/wenzishibie_shibietupian4.jpg','百科链接2','百科详情2'),(223,'2023-08-09 01:09:19','识别名称3','upload/wenzishibie_shibietupian3.jpg,upload/wenzishibie_shibietupian4.jpg,upload/wenzishibie_shibietupian5.jpg','百科链接3','百科详情3'),(224,'2023-08-09 01:09:19','识别名称4','upload/wenzishibie_shibietupian4.jpg,upload/wenzishibie_shibietupian5.jpg,upload/wenzishibie_shibietupian6.jpg','百科链接4','百科详情4'),(225,'2023-08-09 01:09:19','识别名称5','upload/wenzishibie_shibietupian5.jpg,upload/wenzishibie_shibietupian6.jpg,upload/wenzishibie_shibietupian7.jpg','百科链接5','百科详情5'),(226,'2023-08-09 01:09:19','识别名称6','upload/wenzishibie_shibietupian6.jpg,upload/wenzishibie_shibietupian7.jpg,upload/wenzishibie_shibietupian8.jpg','百科链接6','百科详情6'),(227,'2023-08-09 01:09:19','识别名称7','upload/wenzishibie_shibietupian7.jpg,upload/wenzishibie_shibietupian8.jpg,upload/wenzishibie_shibietupian9.jpg','百科链接7','百科详情7'),(228,'2023-08-09 01:09:19','识别名称8','upload/wenzishibie_shibietupian8.jpg,upload/wenzishibie_shibietupian9.jpg,upload/wenzishibie_shibietupian10.jpg','百科链接8','百科详情8');
+/*!40000 ALTER TABLE `wenzishibie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `xueshengchengji`
+--
+
+DROP TABLE IF EXISTS `xueshengchengji`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `xueshengchengji` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `yonghuming` varchar(200) DEFAULT NULL COMMENT '用户名',
+  `chengji` double NOT NULL COMMENT '成绩',
+  `tianjiariqi` date DEFAULT NULL COMMENT '添加日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=utf8 COMMENT='学生成绩';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `xueshengchengji`
+--
+
+LOCK TABLES `xueshengchengji` WRITE;
+/*!40000 ALTER TABLE `xueshengchengji` DISABLE KEYS */;
+INSERT INTO `xueshengchengji` VALUES (241,'2023-08-09 01:09:19','用户名1',1,'2023-08-09'),(242,'2023-08-09 01:09:19','用户名2',2,'2023-08-09'),(243,'2023-08-09 01:09:19','用户名3',3,'2023-08-09'),(244,'2023-08-09 01:09:19','用户名4',4,'2023-08-09'),(245,'2023-08-09 01:09:19','用户名5',5,'2023-08-09'),(246,'2023-08-09 01:09:19','用户名6',6,'2023-08-09'),(247,'2023-08-09 01:09:19','用户名7',7,'2023-08-09'),(248,'2023-08-09 01:09:19','用户名8',8,'2023-08-09');
+/*!40000 ALTER TABLE `xueshengchengji` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `yinleleixing`
+--
+
+DROP TABLE IF EXISTS `yinleleixing`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `yinleleixing` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `yinleleixing` varchar(200) NOT NULL COMMENT '音乐类型',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `yinleleixing` (`yinleleixing`)
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 COMMENT='音乐类型';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `yinleleixing`
+--
+
+LOCK TABLES `yinleleixing` WRITE;
+/*!40000 ALTER TABLE `yinleleixing` DISABLE KEYS */;
+INSERT INTO `yinleleixing` VALUES (81,'2023-08-09 01:09:19','音乐类型1'),(82,'2023-08-09 01:09:19','音乐类型2'),(83,'2023-08-09 01:09:19','音乐类型3'),(84,'2023-08-09 01:09:19','音乐类型4'),(85,'2023-08-09 01:09:19','音乐类型5'),(86,'2023-08-09 01:09:19','音乐类型6'),(87,'2023-08-09 01:09:19','音乐类型7'),(88,'2023-08-09 01:09:19','音乐类型8');
+/*!40000 ALTER TABLE `yinleleixing` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `yinlexinxi`
+--
+
+DROP TABLE IF EXISTS `yinlexinxi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `yinlexinxi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `songname` varchar(200) NOT NULL COMMENT '歌名',
+  `songfile` longtext NOT NULL COMMENT '音乐文件',
+  `yinleleixing` varchar(200) DEFAULT NULL COMMENT '音乐类型',
+  `yinlefengmian` longtext COMMENT '音乐封面',
+  `singer` varchar(200) NOT NULL COMMENT '歌手',
+  `tianjiariqi` date DEFAULT NULL COMMENT '添加日期',
+  `neirongxiangqing` longtext COMMENT '内容详情',
+  `clicktime` datetime DEFAULT NULL COMMENT '最近点击时间',
+  `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COMMENT='音乐信息';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `yinlexinxi`
+--
+
+LOCK TABLES `yinlexinxi` WRITE;
+/*!40000 ALTER TABLE `yinlexinxi` DISABLE KEYS */;
+INSERT INTO `yinlexinxi` VALUES (141,'2023-08-09 01:09:19','歌名1','','音乐类型1','upload/yinlexinxi_yinlefengmian1.jpg,upload/yinlexinxi_yinlefengmian2.jpg,upload/yinlexinxi_yinlefengmian3.jpg','歌手1','2023-08-09','内容详情1','2023-08-09 09:09:19',0),(142,'2023-08-09 01:09:19','歌名2','','音乐类型2','upload/yinlexinxi_yinlefengmian2.jpg,upload/yinlexinxi_yinlefengmian3.jpg,upload/yinlexinxi_yinlefengmian4.jpg','歌手2','2023-08-09','内容详情2','2023-08-09 09:09:19',0),(143,'2023-08-09 01:09:19','歌名3','','音乐类型3','upload/yinlexinxi_yinlefengmian3.jpg,upload/yinlexinxi_yinlefengmian4.jpg,upload/yinlexinxi_yinlefengmian5.jpg','歌手3','2023-08-09','内容详情3','2023-08-09 09:09:19',0),(144,'2023-08-09 01:09:19','歌名4','','音乐类型4','upload/yinlexinxi_yinlefengmian4.jpg,upload/yinlexinxi_yinlefengmian5.jpg,upload/yinlexinxi_yinlefengmian6.jpg','歌手4','2023-08-09','内容详情4','2023-08-09 09:09:19',0),(145,'2023-08-09 01:09:19','歌名5','','音乐类型5','upload/yinlexinxi_yinlefengmian5.jpg,upload/yinlexinxi_yinlefengmian6.jpg,upload/yinlexinxi_yinlefengmian7.jpg','歌手5','2023-08-09','内容详情5','2023-08-09 09:09:19',0),(146,'2023-08-09 01:09:19','歌名6','','音乐类型6','upload/yinlexinxi_yinlefengmian6.jpg,upload/yinlexinxi_yinlefengmian7.jpg,upload/yinlexinxi_yinlefengmian8.jpg','歌手6','2023-08-09','内容详情6','2023-08-09 09:09:19',0),(147,'2023-08-09 01:09:19','歌名7','','音乐类型7','upload/yinlexinxi_yinlefengmian7.jpg,upload/yinlexinxi_yinlefengmian8.jpg,upload/yinlexinxi_yinlefengmian9.jpg','歌手7','2023-08-09','内容详情7','2023-08-09 09:09:19',0),(148,'2023-08-09 01:09:19','歌名8','','音乐类型8','upload/yinlexinxi_yinlefengmian8.jpg,upload/yinlexinxi_yinlefengmian9.jpg,upload/yinlexinxi_yinlefengmian10.jpg','歌手8','2023-08-09','内容详情8','2023-08-09 09:09:19',0);
+/*!40000 ALTER TABLE `yinlexinxi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `yonghu`
+--
+
+DROP TABLE IF EXISTS `yonghu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `yonghu` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `yonghuming` varchar(200) NOT NULL COMMENT '用户名',
+  `mima` varchar(200) NOT NULL COMMENT '密码',
+  `xingming` varchar(200) NOT NULL COMMENT '姓名',
+  `touxiang` longtext COMMENT '头像',
+  `xingbie` varchar(200) DEFAULT NULL COMMENT '性别',
+  `nianling` int(11) DEFAULT NULL COMMENT '年龄',
+  `shouji` varchar(200) DEFAULT NULL COMMENT '手机',
+  `wenjian` longtext COMMENT '文件',
+  `shengfen` varchar(200) DEFAULT NULL COMMENT '省份',
+  `shiji` varchar(200) DEFAULT NULL COMMENT '市级',
+  `quming` varchar(200) DEFAULT NULL COMMENT '区名',
+  `shangpinfenlei` varchar(200) DEFAULT NULL COMMENT '商品分类',
+  `yonghujifen` double DEFAULT NULL COMMENT '用户积分',
+  `yonghudengji` varchar(200) DEFAULT NULL COMMENT '用户等级',
+  `vip` varchar(200) DEFAULT '否' COMMENT '是否会员',
+  `status` int(11) DEFAULT '0' COMMENT '状态',
+  `passwordwrongnum` int(11) DEFAULT '0' COMMENT '密码错误次数',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `yonghuming` (`yonghuming`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='用户';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `yonghu`
+--
+
+LOCK TABLES `yonghu` WRITE;
+/*!40000 ALTER TABLE `yonghu` DISABLE KEYS */;
+INSERT INTO `yonghu` VALUES (41,'2023-08-09 01:09:19','用户名1','123456','姓名1','upload/yonghu_touxiang1.jpg','男',1,'13823888881','','省份1','市级1','区名1','商品分类1',1,'初级','否',0,0),(42,'2023-08-09 01:09:19','用户名2','123456','姓名2','upload/yonghu_touxiang2.jpg','男',2,'13823888882','','省份2','市级2','区名2','商品分类2',2,'初级','否',0,0),(43,'2023-08-09 01:09:19','用户名3','123456','姓名3','upload/yonghu_touxiang3.jpg','男',3,'13823888883','','省份3','市级3','区名3','商品分类3',3,'初级','否',0,0),(44,'2023-08-09 01:09:19','用户名4','123456','姓名4','upload/yonghu_touxiang4.jpg','男',4,'13823888884','','省份4','市级4','区名4','商品分类4',4,'初级','否',0,0),(45,'2023-08-09 01:09:19','用户名5','123456','姓名5','upload/yonghu_touxiang5.jpg','男',5,'13823888885','','省份5','市级5','区名5','商品分类5',5,'初级','否',0,0),(46,'2023-08-09 01:09:19','用户名6','123456','姓名6','upload/yonghu_touxiang6.jpg','男',6,'13823888886','','省份6','市级6','区名6','商品分类6',6,'初级','否',0,0),(47,'2023-08-09 01:09:19','用户名7','123456','姓名7','upload/yonghu_touxiang7.jpg','男',7,'13823888887','','省份7','市级7','区名7','商品分类7',7,'初级','否',0,0),(48,'2023-08-09 01:09:19','用户名8','123456','姓名8','upload/yonghu_touxiang8.jpg','男',8,'13823888888','','省份8','市级8','区名8','商品分类8',8,'初级','否',0,0);
+/*!40000 ALTER TABLE `yonghu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `zheduotongji`
+--
+
+DROP TABLE IF EXISTS `zheduotongji`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `zheduotongji` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `tongjiriqi` date DEFAULT NULL COMMENT '统计日期',
+  `yuyuerenshu` int(11) DEFAULT NULL COMMENT '预约人数',
+  `jiuzhenrenshu` int(11) DEFAULT NULL COMMENT '就诊人数',
+  `zhuanzhenrenshu` int(11) DEFAULT NULL COMMENT '转诊人数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=259 DEFAULT CHARSET=utf8 COMMENT='折多统计';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zheduotongji`
+--
+
+LOCK TABLES `zheduotongji` WRITE;
+/*!40000 ALTER TABLE `zheduotongji` DISABLE KEYS */;
+INSERT INTO `zheduotongji` VALUES (251,'2023-08-09 01:09:19','2023-08-09',1,1,1),(252,'2023-08-09 01:09:19','2023-08-09',2,2,2),(253,'2023-08-09 01:09:19','2023-08-09',3,3,3),(254,'2023-08-09 01:09:19','2023-08-09',4,4,4),(255,'2023-08-09 01:09:19','2023-08-09',5,5,5),(256,'2023-08-09 01:09:19','2023-08-09',6,6,6),(257,'2023-08-09 01:09:19','2023-08-09',7,7,7),(258,'2023-08-09 01:09:19','2023-08-09',8,8,8);
+/*!40000 ALTER TABLE `zheduotongji` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `zhiwushibie`
+--
+
+DROP TABLE IF EXISTS `zhiwushibie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `zhiwushibie` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `zhiwumingcheng` varchar(200) DEFAULT NULL COMMENT '植物名称',
+  `zhiwutupian` longtext COMMENT '植物图片',
+  `baikelianjie` varchar(200) DEFAULT NULL COMMENT '百科链接',
+  `baikexiangqing` longtext COMMENT '百科详情',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8 COMMENT='植物识别';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zhiwushibie`
+--
+
+LOCK TABLES `zhiwushibie` WRITE;
+/*!40000 ALTER TABLE `zhiwushibie` DISABLE KEYS */;
+INSERT INTO `zhiwushibie` VALUES (191,'2023-08-09 01:09:19','植物名称1','upload/zhiwushibie_zhiwutupian1.jpg,upload/zhiwushibie_zhiwutupian2.jpg,upload/zhiwushibie_zhiwutupian3.jpg','百科链接1','百科详情1'),(192,'2023-08-09 01:09:19','植物名称2','upload/zhiwushibie_zhiwutupian2.jpg,upload/zhiwushibie_zhiwutupian3.jpg,upload/zhiwushibie_zhiwutupian4.jpg','百科链接2','百科详情2'),(193,'2023-08-09 01:09:19','植物名称3','upload/zhiwushibie_zhiwutupian3.jpg,upload/zhiwushibie_zhiwutupian4.jpg,upload/zhiwushibie_zhiwutupian5.jpg','百科链接3','百科详情3'),(194,'2023-08-09 01:09:19','植物名称4','upload/zhiwushibie_zhiwutupian4.jpg,upload/zhiwushibie_zhiwutupian5.jpg,upload/zhiwushibie_zhiwutupian6.jpg','百科链接4','百科详情4'),(195,'2023-08-09 01:09:19','植物名称5','upload/zhiwushibie_zhiwutupian5.jpg,upload/zhiwushibie_zhiwutupian6.jpg,upload/zhiwushibie_zhiwutupian7.jpg','百科链接5','百科详情5'),(196,'2023-08-09 01:09:19','植物名称6','upload/zhiwushibie_zhiwutupian6.jpg,upload/zhiwushibie_zhiwutupian7.jpg,upload/zhiwushibie_zhiwutupian8.jpg','百科链接6','百科详情6'),(197,'2023-08-09 01:09:19','植物名称7','upload/zhiwushibie_zhiwutupian7.jpg,upload/zhiwushibie_zhiwutupian8.jpg,upload/zhiwushibie_zhiwutupian9.jpg','百科链接7','百科详情7'),(198,'2023-08-09 01:09:19','植物名称8','upload/zhiwushibie_zhiwutupian8.jpg,upload/zhiwushibie_zhiwutupian9.jpg,upload/zhiwushibie_zhiwutupian10.jpg','百科链接8','百科详情8');
+/*!40000 ALTER TABLE `zhiwushibie` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-08-19 17:55:19

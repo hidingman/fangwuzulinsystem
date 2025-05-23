@@ -1,0 +1,478 @@
+{
+	"pages": [ {
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "首页"
+		}
+	},{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "登录"
+		}
+	}, {
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "注册"
+		}
+	}, {
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "忘记密码"
+		}
+	}, {
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "我的"
+		}
+	}, {
+		"path": "pages/user-info/user-info",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+	, {
+		"path": "pages/chat/chat",
+		"style": {
+			"navigationBarTitleText": "智能客服"
+		}
+	}
+	, {
+		"path": "pages/news-detail/news-detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯详情"
+		}
+	}
+	,{
+		"path": "pages/guke/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "顾客"
+		}
+	},{
+		"path": "pages/guke/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "顾客"
+		}
+	}
+	,{
+		"path": "pages/guke/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "顾客"
+		}
+	}
+	,{
+		"path": "pages/yuangong/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "员工"
+		}
+	},{
+		"path": "pages/yuangong/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "员工"
+		}
+	}
+	,{
+		"path": "pages/yuangong/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "员工"
+		}
+	}
+	,{
+		"path": "pages/fangyuanxinxi/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息"
+		}
+	},{
+		"path": "pages/fangyuanxinxi/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息"
+		}
+	}
+	,{
+		"path": "pages/fangyuanxinxi/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息"
+		}
+	}
+	,{
+		"path": "pages/fangwuhuxing/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋户型"
+		}
+	},{
+		"path": "pages/fangwuhuxing/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋户型"
+		}
+	}
+	,{
+		"path": "pages/fangwuhuxing/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋户型"
+		}
+	}
+	,{
+		"path": "pages/fangwuzulin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋租赁"
+		}
+	},{
+		"path": "pages/fangwuzulin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋租赁"
+		}
+	}
+	,{
+		"path": "pages/fangwuzulin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房屋租赁"
+		}
+	}
+	,{
+		"path": "pages/zulinhetong/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁合同"
+		}
+	},{
+		"path": "pages/zulinhetong/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁合同"
+		}
+	}
+	,{
+		"path": "pages/zulinhetong/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁合同"
+		}
+	}
+	,{
+		"path": "pages/tuizushenqing/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "退租申请"
+		}
+	},{
+		"path": "pages/tuizushenqing/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "退租申请"
+		}
+	}
+	,{
+		"path": "pages/tuizushenqing/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "退租申请"
+		}
+	}
+	,{
+		"path": "pages/zulinpingjia/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁评价"
+		}
+	},{
+		"path": "pages/zulinpingjia/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁评价"
+		}
+	}
+	,{
+		"path": "pages/zulinpingjia/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租赁评价"
+		}
+	}
+	,{
+		"path": "pages/yuyuekanfang/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "预约看房"
+		}
+	},{
+		"path": "pages/yuyuekanfang/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "预约看房"
+		}
+	}
+	,{
+		"path": "pages/yuyuekanfang/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "预约看房"
+		}
+	}
+	,{
+		"path": "pages/kaoqindaka/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "考勤打卡"
+		}
+	},{
+		"path": "pages/kaoqindaka/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "考勤打卡"
+		}
+	}
+	,{
+		"path": "pages/kaoqindaka/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "考勤打卡"
+		}
+	}
+	,{
+		"path": "pages/zufangyixiang/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租房意向"
+		}
+	},{
+		"path": "pages/zufangyixiang/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租房意向"
+		}
+	}
+	,{
+		"path": "pages/zufangyixiang/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "租房意向"
+		}
+	}
+	,{
+		"path": "pages/newstype/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯分类"
+		}
+	},{
+		"path": "pages/newstype/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯分类"
+		}
+	}
+	,{
+		"path": "pages/newstype/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯分类"
+		}
+	}
+	,{
+		"path": "pages/news/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯"
+		}
+	},{
+		"path": "pages/news/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "公告资讯"
+		}
+	}
+	,{
+		"path": "pages/popupremind/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "弹窗提醒"
+		}
+	},{
+		"path": "pages/popupremind/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "弹窗提醒"
+		}
+	}
+	,{
+		"path": "pages/popupremind/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "弹窗提醒"
+		}
+	}
+	,{
+		"path": "pages/storeup/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "收藏表"
+		}
+	},{
+		"path": "pages/storeup/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "收藏表"
+		}
+	}
+	,{
+		"path": "pages/storeup/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "收藏表"
+		}
+	}
+	,{
+		"path": "pages/discussfangyuanxinxi/list",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息评论表"
+		}
+	},{
+		"path": "pages/discussfangyuanxinxi/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息评论表"
+		}
+	}
+	,{
+		"path": "pages/discussfangyuanxinxi/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "房源信息评论表"
+		}
+	}
+	, {
+		"path": "pages/pay-confirm/pay-confirm",
+		"style": {
+			"navigationBarTitleText": "确认支付"
+		}
+	}
+    ,{
+        "path": "common/linkOthers/linkOthers",
+        "style": {
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "black"
+        }
+    }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "骄阳房屋租赁公司业务管理系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#000000",
+		"borderStyle": "white",
+		"backgroundColor": "#E4EFBE",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/index.png",
+				"selectedIconPath": "static/tabs/index1.png",
+				"text": "首页"
+			}
+			
+
+			,{
+				"pagePath": "pages/fangyuanxinxi/list",
+				"iconPath": "/static/tabs/icon1.png",
+				"selectedIconPath": "/static/tabs/icon1_act.png",
+				"text": "房源信息"
+			}
+
+			,{
+			 	"pagePath": "pages/news/list",
+				"iconPath": "static/tabs/news.png",
+			 	"selectedIconPath": "static/tabs/news_act.png",
+				"text": "公告资讯"
+			}
+
+
+
+
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/mine.png",
+				"selectedIconPath": "static/tabs/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CustomProgress">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/views/front/components/progress/CustomProgress.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
